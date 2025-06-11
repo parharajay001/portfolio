@@ -26,7 +26,7 @@ export const Hero = ({ scrollToSection }: HeroProps) => {
             variants={fadeInUp}
             src={personalInfo.image}
             alt={personalInfo.name}
-            className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-purple-400/30 shadow-2xl"
+            className="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-purple-400/30 shadow-2xl"
           />
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">

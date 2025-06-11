@@ -1,4 +1,5 @@
 import { Github, Mail, Phone } from 'lucide-react';
+import { ProfilePic } from '../assets/images';
 
 export const skills = [
   'React',
@@ -64,10 +65,10 @@ export const projects = [
 
 export const experience = [
   {
-    company: 'TechCorp Solutions',
+    company: 'Cisconic PVT. LTD.',
     position: 'Senior Frontend Developer',
-    duration: 'Jan 2022 - Present',
-    location: 'San Francisco, CA',
+    duration: 'Mar 2022 - Present',
+    location: 'Hydrabad, India',
     responsibilities: [
       'Led frontend development for 3 major client projects, resulting in 40% improvement in user engagement',
       'Architected and implemented reusable component library using React and TypeScript, reducing development time by 30%',
@@ -77,36 +78,36 @@ export const experience = [
     ],
     tech: ['React', 'TypeScript', 'Redux', 'Material-UI', 'Jest', 'Git', 'Jira'],
   },
-  {
-    company: 'Digital Innovation Labs',
-    position: 'Frontend Developer',
-    duration: 'Mar 2021 - Dec 2021',
-    location: 'Austin, TX',
-    responsibilities: [
-      'Developed responsive web applications for 5+ clients using React and modern CSS frameworks',
-      'Integrated RESTful APIs and implemented state management using Redux for complex applications',
-      'Created interactive data visualizations using Highcharts for business intelligence dashboards',
-      'Participated in Agile development process with daily standups and sprint planning',
-      'Implemented comprehensive testing strategies using Jest, achieving 85% code coverage',
-    ],
-    tech: ['React', 'JavaScript', 'CSS3', 'Highcharts', 'Redux', 'REST APIs', 'Agile'],
-  },
+  // {
+  //   company: 'NeetaTech',
+  //   position: 'Software Engineer',
+  //   duration: 'Jan 2021 - July 2021',
+  //   location: 'Pune, India',
+  //   responsibilities: [
+  //     'Developed responsive web applications for 5+ clients using React and modern CSS frameworks',
+  //     'Integrated RESTful APIs and implemented state management using Redux for complex applications',
+  //     'Created interactive data visualizations using Highcharts for business intelligence dashboards',
+  //     'Participated in Agile development process with daily standups and sprint planning',
+  //     'Implemented comprehensive testing strategies using Jest, achieving 85% code coverage',
+  //   ],
+  //   tech: ['React', 'JavaScript', 'CSS3', 'Highcharts', 'Redux', 'REST APIs', 'Agile'],
+  // },
 ];
 
 export const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    content: 'alex.johnson@email.com',
+    content: 'parharajay001@gmail.com',
   },
-  { icon: Phone, title: 'Phone', content: '+1 (555) 123-4567' },
-  { icon: Github, title: 'GitHub', content: 'github.com/alexjohnson' },
+  { icon: Phone, title: 'Phone', content: '+91 7721908843' },
+  { icon: Github, title: 'GitHub', content: 'github.com/parharajay001' },
 ];
 
 export const personalInfo = {
-  name: 'Alex Johnson',
+  name: 'Ajay Parhar',
   role: 'React Developer',
-  location: 'San Francisco, CA',
-  bio: "Senior Frontend Developer with 3+ years of experience building scalable, user-centric web applications using React, TypeScript, and modern web technologies.",
-  image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+  location: 'Pune, India',
+  bio: 'Senior Frontend Developer with 3+ years of experience building scalable, user-centric web applications using React, TypeScript, and modern web technologies.',
+  image: ProfilePic,
 };

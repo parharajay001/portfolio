@@ -59,7 +59,7 @@ export const Experience = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.3 }}
                     >
-                      <span className='text-purple-400 mt-2'>•</span>
+                      <span className='text-purple-400'>•</span>
                       <span>{responsibility}</span>
                     </motion.li>
                   ))}
