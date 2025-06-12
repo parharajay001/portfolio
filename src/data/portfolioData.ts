@@ -1,5 +1,5 @@
 import { Github, Mail, Phone } from 'lucide-react';
-import { ProfilePic } from '../assets/images';
+import { ProfilePic, Project_1 } from '../assets/images';
 
 export const skills = [
   'React',
@@ -30,36 +30,36 @@ export const projects = [
     description:
       'Complete admin dashboard for e-commerce platform with real-time analytics, inventory management, and order tracking. Built with React, Redux, and Material-UI.',
     tech: ['React', 'Redux', 'TypeScript', 'Material-UI', 'Highcharts', 'REST API'],
-    github: 'https://github.com',
+    github: 'https://github.com/parharajay001',
     live: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+    image: Project_1
   },
   {
     title: 'Task Management System',
     description:
       'Collaborative project management tool with drag-and-drop functionality, real-time updates, and team collaboration features. Integrated with REST APIs for seamless data management.',
     tech: ['React', 'TypeScript', 'TailwindCSS', 'ShadCN', 'Jest', 'RESTful APIs'],
-    github: 'https://github.com',
+    github: 'https://github.com/parharajay001',
     live: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
+    image: Project_1
   },
   {
     title: 'Financial Analytics Platform',
     description:
       'Advanced financial dashboard with interactive charts, portfolio tracking, and market analysis. Features complex data visualizations using Highcharts and real-time data integration.',
     tech: ['React', 'Redux', 'JavaScript', 'Highcharts', 'CSS3', 'REST API'],
-    github: 'https://github.com',
+    github: 'https://github.com/parharajay001',
     live: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+    image: Project_1
   },
   {
     title: 'Healthcare Management System',
     description:
       'Patient management system for healthcare providers with appointment scheduling, medical records, and billing integration. Built with focus on security and HIPAA compliance.',
     tech: ['React', 'TypeScript', 'Material-UI', 'Redux', 'Jest', 'RESTful APIs'],
-    github: 'https://github.com',
+    github: 'https://github.com/parharajay001',
     live: 'https://demo.com',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop',
+    image: Project_1
   },
 ];
 

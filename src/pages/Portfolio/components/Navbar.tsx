@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { personalInfo } from '../../../data/portfolioData';
 import { fadeIn } from '../../../utils/animations';
-import { useTheme } from '../../../context/ThemeContext';
+import { Resume } from '../../../assets/pdfs';
+// import { useTheme } from '../../../context/ThemeContext';
 
 interface NavbarProps {
   activeSection: string;
@@ -18,7 +19,7 @@ export const Navbar = ({
   setIsMenuOpen,
 }: NavbarProps) => {
   const navItems = ['Hero', 'About', 'Experience', 'Projects', 'Contact'];
-  const { theme, toggleTheme } = useTheme();
+  // const { theme, toggleTheme } = useTheme();
 
   return (
     <motion.nav
@@ -51,13 +52,22 @@ export const Navbar = ({
               </button>
             ))}
             {/* Theme toggle button */}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className='p-2 rounded-lg bg-background-secondary text-foreground hover:text-primary transition-colors'
               aria-label='Toggle theme'
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            </button> */}
+            <motion.button
+              className='px-8 py-2 bg-primary text-background rounded-lg font-semibold hover:bg-primary-hover transform transition-all'
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a href={Resume} download>
+                Download Resume
+              </a>
+            </motion.button>
           </div>
 
           <button
@@ -96,7 +106,7 @@ export const Navbar = ({
               </button>
             ))}
             {/* Theme toggle button */}
-            <button
+            {/* <button
               onClick={toggleTheme}
               className={`block w-full text-left px-3 py-2 rounded-lg ${'text-foreground hover:text-primary hover:bg-background-secondary'} transition-colors`}
               aria-label='Toggle theme'
@@ -112,7 +122,7 @@ export const Navbar = ({
                   <Moon size={20} />
                 </div>
               )}
-            </button>
+            </button> */}
           </div>
         </motion.div>
       )}

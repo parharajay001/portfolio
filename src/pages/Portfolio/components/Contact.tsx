@@ -48,23 +48,26 @@ export const Contact = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            I'm always interested in new opportunities and exciting projects. Let's discuss how we can
-            bring your ideas to life!
+            I'm always interested in new opportunities and exciting projects. Let's discuss how we
+            can bring your ideas to life!
           </motion.p>
 
           <div className='grid md:grid-cols-3 gap-8 mb-12'>
-            {contactInfo.map((item, index) => (
+            {contactInfo.map((item) => (
               <motion.div
                 key={item.title}
                 className='group bg-background-secondary/50 backdrop-blur-sm p-6 rounded-xl border border-border hover:border-primary/50 transition-all shadow-black shadow-2xl'
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{
+                  opacity: 0,
+                  scale: 0.8,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{
                   scale: 1.05,
-                  y: -5,
-                  transition: { duration: 0.2 },
                 }}
               >
                 <item.icon

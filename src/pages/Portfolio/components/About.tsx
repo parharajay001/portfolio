@@ -67,16 +67,23 @@ export const About = () => {
               <h3 className='text-2xl font-semibold mb-6 text-primary'>Technical Skills</h3>
               <div className='grid grid-cols-2 sm:grid-cols-3 gap-3'>
                 {skills.map((skill, index) => (
-                  <motion.div
+                  <motion.span
                     key={skill}
-                    className='bg-background-secondary/20 p-3 rounded-lg border border-border hover:border-primary/50 transition-colors shadow-black shadow-md'
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    className='text-foreground-secondary hover:text-primary/50 bg-background-secondary/20 p-3 rounded-lg border border-border hover:border-primary/50 transition-colors shadow-black shadow-md cursor-default'
+                    initial={{
+                      opacity: 0,
+                      y: 20,
+                    }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: { duration: 0.3, delay: index * 0.1 },
+                    }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    whileHover={{ scale: 0.95 }}
                   >
-                    <span className='text-foreground-secondary'>{skill}</span>
-                  </motion.div>
+                    {skill}
+                  </motion.span>
                 ))}
               </div>
             </motion.div>

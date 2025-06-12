@@ -27,7 +27,7 @@ export const Projects = () => {
     >
       <section id='projects' className='min-h-screen flex items-center py-20 px-4 relative'>
         <motion.div
-          className='max-w-6xl mx-auto relative z-10'
+          className='max-w-4xl mx-auto relative z-10'
           {...fadeIn()}
           viewport={{ once: true }}
         >
@@ -40,22 +40,17 @@ export const Projects = () => {
           >
             Featured Projects
           </motion.h2>
-          <div className='grid md:grid-cols-2 gap-8'>
+          <div className='grid md:grid-cols-1 gap-8'>
             {projects.map((project, index) => (
               <motion.div
                 key={project.title}
                 className='bg-background-secondary/50 backdrop-blur-sm rounded-xl overflow-hidden border border-border hover:border-primary/50 group transform transition-all duration-300 shadow-black shadow-2xl'
-                initial={{ opacity: 0, y: 50 + index }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                whileHover={{
-                  scale: 1.02,
-                  y: -5,
-                  transition: { duration: 0.2 },
-                }}
+                transition={{ duration: 0.3, delay: index * 0.2 }}
               >
-                <div className='relative overflow-hidden h-28'>
+                <div className='relative overflow-hidden h-48'>
                   <img
                     src={project.image}
                     alt={project.title}
@@ -86,18 +81,24 @@ export const Projects = () => {
                     </div>
                   </div>
                 </div>
-                <div className='p-6'>
+                <div className='p-8'>
                   <h3 className='text-2xl font-bold text-primary mb-3'>{project.title}</h3>
                   <p className='text-foreground mb-4 leading-relaxed'>{project.description}</p>
-                  <div className='flex flex-wrap gap-2'>
-                    {project.tech.map((tech) => (
+                  <div className='flex flex-wrap gap-3'>
+                    {project.tech.map((tech, index) => (
                       <motion.span
                         key={tech}
-                        className='bg-primary/10 text-primary px-2 py-1 rounded text-xs border border-primary/30'
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
+                        className='bg-primary/10 text-primary px-2 py-1 rounded text-xs border border-primary/30 shadow-black shadow-md cursor-default'
+                        initial={{
+                          opacity: 0,
+                          y: 20,
+                        }}
+                        whileInView={{
+                          opacity: 1,
+                          y: 0,
+                          transition: { duration: 0.3, delay: index * 0.2 },
+                        }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: 0.1 }}
                         whileHover={{ scale: 1.1 }}
                       >
                         {tech}
