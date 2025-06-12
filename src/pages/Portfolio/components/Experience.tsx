@@ -5,7 +5,7 @@ import { fadeIn } from '../../../utils/animations';
 
 export const Experience = () => {
   return (
-    <section id='experience' className='py-20 px-4 bg-background-secondary/30'>
+    <section id='experience' className='min-h-screen flex items-center py-20 px-4 bg-background-secondary/30'>
       <motion.div className='max-w-6xl mx-auto' {...fadeIn()} viewport={{ once: true }}>
         <motion.h2
           className='text-4xl font-bold text-center mb-16 text-foreground'

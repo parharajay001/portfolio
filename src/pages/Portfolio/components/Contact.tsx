@@ -4,7 +4,7 @@ import { contactInfo } from '../../../data/portfolioData';
 
 export const Contact = () => {
   return (
-    <section id='contact' className='py-20 px-4 bg-background-secondary/30'>
+    <section id='contact' className='min-h-screen flex items-center py-20 px-4 bg-background-secondary/30'>
       <motion.div
         className='max-w-4xl mx-auto text-center'
         initial={{ opacity: 0, y: 30 }}
