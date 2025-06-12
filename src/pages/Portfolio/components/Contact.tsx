@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Resume } from '../../../assets/pdfs';
 import { contactInfo } from '../../../data/portfolioData';
 
 export const Contact = () => {
@@ -47,7 +48,17 @@ export const Contact = () => {
                 size={32}
               />
               <h3 className='text-lg font-semibold text-white mb-2'>{item.title}</h3>
-              <p className='text-gray-300'>{item.content}</p>
+              <p className='text-gray-300'>
+                {item.title === 'GitHub' ? (
+                  <a href={`https://www.${item.content}`} target='_blank'>
+                    {item.content}
+                  </a>
+                ) : item.title === 'Email' ? (
+                  <a href={`mailto:${item.content}`}>{item.content}</a>
+                ) : (
+                  item.title === 'Phone' && <a href={`tel:${item.content}`}>{item.content}</a>
+                )}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -64,15 +75,17 @@ export const Contact = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Download Resume
+            <a href={Resume} download>
+              Download Resume
+            </a>
           </motion.button>
-          <motion.button
+          {/* <motion.button
             className='px-8 py-3 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all'
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             Schedule Call
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </motion.div>
     </section>
