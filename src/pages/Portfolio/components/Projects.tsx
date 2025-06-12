@@ -6,7 +6,7 @@ import { fadeIn } from '../../../utils/animations';
 export const Projects = () => {
   return (
     <section id='projects' className='min-h-screen flex items-center py-20 px-4'>
-      <motion.div className='max-w-7xl mx-auto' {...fadeIn()} viewport={{ once: true }}>
+      <motion.div className='max-w-6xl mx-auto' {...fadeIn()} viewport={{ once: true }}>
         <motion.h2
           className='text-4xl font-bold text-center mb-16 text-foreground'
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export const Projects = () => {
               transition={{ duration: 0.5, delay: 0 }}
               whileHover={{ scale: 1.02 }}
             >
-              <div className='relative overflow-hidden h-48'>
+              <div className='relative overflow-hidden h-28'>
                 <img
                   src={project.image}
                   alt={project.title}
