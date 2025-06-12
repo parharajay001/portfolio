@@ -10,7 +10,6 @@ import { Projects } from './components/Projects';
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'about', 'experience', 'projects', 'contact'];
@@ -52,7 +51,7 @@ const Portfolio = () => {
     setIsMenuOpen(false);
   };
   return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
+    <div className='min-h-screen bg-background transition-colors duration-200'>
       <Navbar
         activeSection={activeSection}
         scrollToSection={scrollToSection}

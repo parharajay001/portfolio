@@ -8,7 +8,7 @@ export const Projects = () => {
     <section id='projects' className='py-20 px-4'>
       <motion.div className='max-w-7xl mx-auto' {...fadeIn()} viewport={{ once: true }}>
         <motion.h2
-          className='text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'
+          className='text-4xl font-bold text-center mb-16 text-foreground'
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -20,7 +20,7 @@ export const Projects = () => {
           {projects.map((project) => (
             <motion.div
               key={project.title}
-              className='bg-slate-800/50 rounded-xl overflow-hidden border border-purple-500/20 hover:border-purple-400/50 group'
+              className='bg-background-secondary rounded-xl overflow-hidden border border-border hover:border-primary/50 group'
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -33,11 +33,11 @@ export const Projects = () => {
                   alt={project.title}
                   className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
                 />
-                <div className='absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+                <div className='absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
                   <div className='transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex gap-4'>
                     <motion.a
                       href={project.github}
-                      className='bg-purple-600/90 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-purple-500 transition-colors'
+                      className='bg-primary/90 text-background px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary-hover transition-colors'
                       whileHover={{ scale: 1.05 }}
                       target='_blank'
                       rel='noopener noreferrer'
@@ -47,7 +47,7 @@ export const Projects = () => {
                     </motion.a>
                     <motion.a
                       href={project.live}
-                      className='bg-pink-600/90 text-white px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-pink-500 transition-colors'
+                      className='bg-primary/90 text-background px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary-hover transition-colors'
                       whileHover={{ scale: 1.05 }}
                       target='_blank'
                       rel='noopener noreferrer'
@@ -59,13 +59,13 @@ export const Projects = () => {
                 </div>
               </div>
               <div className='p-6'>
-                <h3 className='text-2xl font-bold text-purple-400 mb-3'>{project.title}</h3>
-                <p className='text-gray-300 mb-4 leading-relaxed'>{project.description}</p>
+                <h3 className='text-2xl font-bold text-primary mb-3'>{project.title}</h3>
+                <p className='text-foreground mb-4 leading-relaxed'>{project.description}</p>
                 <div className='flex flex-wrap gap-2'>
                   {project.tech.map((tech) => (
                     <motion.span
                       key={tech}
-                      className='bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-xs border border-purple-500/30'
+                      className='bg-primary/10 text-primary px-2 py-1 rounded text-xs border border-primary/30'
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}

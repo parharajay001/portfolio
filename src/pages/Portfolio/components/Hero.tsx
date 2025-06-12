@@ -26,16 +26,16 @@ export const Hero = ({ scrollToSection }: HeroProps) => {
             variants={fadeInUp}
             src={personalInfo.image}
             alt={personalInfo.name}
-            className="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-purple-400/30 shadow-2xl"
+            className="w-36 h-36 rounded-full mx-auto mb-6 border-4 border-primary/30 shadow-2xl"
           />
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="text-foreground">
               {personalInfo.role}
             </span>
           </motion.h1>
           <motion.p
             variants={fadeInUp}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-foreground-secondary mb-8 max-w-3xl mx-auto"
           >
             {personalInfo.bio}
           </motion.p>
@@ -45,13 +45,13 @@ export const Hero = ({ scrollToSection }: HeroProps) => {
           >
             <button
               onClick={() => scrollToSection('projects')}
-              className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transform hover:scale-105 transition-all shadow-lg"
+              className="px-8 py-3 bg-primary text-background rounded-lg font-semibold hover:bg-primary-hover transform hover:scale-105 transition-all shadow-lg"
             >
               View My Work
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="px-8 py-3 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all"
+              className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-background transition-all"
             >
               Get In Touch
             </button>
@@ -63,7 +63,7 @@ export const Hero = ({ scrollToSection }: HeroProps) => {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.5 }}
         >
-          <ChevronDown className="mx-auto text-purple-400" size={32} />
+          <ChevronDown className="mx-auto text-primary" size={32} />
         </motion.div>
       </motion.div>
     </section>
