@@ -22,7 +22,7 @@ export const Navbar = ({
 
   return (
     <motion.nav
-      className='fixed top-0 w-full bg-background/95 backdrop-blur-sm z-50 border-b border-border'
+      className='fixed top-0 w-full bg-background/20 backdrop-blur-sm z-50 border-b border-border'
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
