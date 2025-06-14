@@ -91,7 +91,7 @@ export const Experience = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: respIndex * 0.1 }}
+                        transition={{ duration: 0.3, delay: respIndex * 0.2 }}
                       >
                         <span className='text-primary'>•</span>
                         <span>{responsibility}</span>
@@ -114,7 +114,7 @@ export const Experience = () => {
                         whileInView={{
                           opacity: 1,
                           y: 0,
-                          transition: { duration: 0.3, delay: techIndex * 0.2 },
+                          transition: { duration: 0.3, delay: techIndex * 0.1 },
                         }}
                         viewport={{ once: true }}
                         whileHover={{ scale: 1.1 }}

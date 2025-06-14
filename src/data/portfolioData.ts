@@ -1,7 +1,25 @@
 import { Github, Mail, Phone } from 'lucide-react';
 import { ProfilePic, Project_1 } from '../assets/images';
-import { FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaBitbucket, FaJira, FaChartArea } from 'react-icons/fa';
-import { SiRedux, SiTypescript, SiJavascript, SiMui, SiTailwindcss, SiJest, SiPostman, SiVite } from 'react-icons/si';
+import {
+  FaReact,
+  FaHtml5,
+  FaCss3Alt,
+  FaGitAlt,
+  FaGithub,
+  FaBitbucket,
+  FaJira,
+  FaChartArea,
+} from 'react-icons/fa';
+import {
+  SiRedux,
+  SiTypescript,
+  SiJavascript,
+  SiMui,
+  SiTailwindcss,
+  SiJest,
+  SiPostman,
+  SiVite,
+} from 'react-icons/si';
 import { TbBrandVscode } from 'react-icons/tb';
 import { IoSpeedometerOutline } from 'react-icons/io5';
 import { BsKanban } from 'react-icons/bs';
@@ -33,46 +51,58 @@ export const skills: Skill[] = [
   { name: 'Agile', Icon: BsKanban },
   { name: 'Chrome DevTools', Icon: VscGraph },
   { name: 'VS Code', Icon: TbBrandVscode },
-  { name: 'Vite', Icon: SiVite }
+  { name: 'Vite', Icon: SiVite },
 ];
 
 export const projects = [
   {
-    title: 'E-Commerce Dashboard',
+    title: 'RevolutioM 2.0',
     description:
-      'Complete admin dashboard for e-commerce platform with real-time analytics, inventory management, and order tracking. Built with React, Redux, and Material-UI.',
-    tech: ['React', 'Redux', 'TypeScript', 'Material-UI', 'Highcharts', 'REST API'],
-    github: 'https://github.com/parharajay001',
-    live: 'https://demo.com',
-    image: Project_1
+      'I had the opportunity to contribute to the development of RevolutioM 2.0, a cutting-edge web application designed exclusively for PepsiCo vendors and distributors. The platform enabled users to perform in-depth analysis, simulations, correlations, and optimizations of sales, profit, and market share at the geographical level. My role involved designing and developing interactive dashboards, charts, and filters that allowed users to effectively visualize and analyze key performance metrics. I collaborated closely with the team to ensure a seamless and intuitive user experience, incorporating client feedback and adhering to best practices in UI/UX design.',
+    tech: [
+      'React',
+      'TypeScript',
+      'Redux',
+      'Material-UI',
+      'Jest',
+      'Git',
+      'Jira',
+      'REST APIs',
+      'Agile',
+      'Highcharts',
+      'VS Code',
+    ],
+    github: null,
+    live: null,
+    image: Project_1,
   },
-  {
-    title: 'Task Management System',
-    description:
-      'Collaborative project management tool with drag-and-drop functionality, real-time updates, and team collaboration features. Integrated with REST APIs for seamless data management.',
-    tech: ['React', 'TypeScript', 'TailwindCSS', 'ShadCN', 'Jest', 'RESTful APIs'],
-    github: 'https://github.com/parharajay001',
-    live: 'https://demo.com',
-    image: Project_1
-  },
-  {
-    title: 'Financial Analytics Platform',
-    description:
-      'Advanced financial dashboard with interactive charts, portfolio tracking, and market analysis. Features complex data visualizations using Highcharts and real-time data integration.',
-    tech: ['React', 'Redux', 'JavaScript', 'Highcharts', 'CSS3', 'REST API'],
-    github: 'https://github.com/parharajay001',
-    live: 'https://demo.com',
-    image: Project_1
-  },
-  {
-    title: 'Healthcare Management System',
-    description:
-      'Patient management system for healthcare providers with appointment scheduling, medical records, and billing integration. Built with focus on security and HIPAA compliance.',
-    tech: ['React', 'TypeScript', 'Material-UI', 'Redux', 'Jest', 'RESTful APIs'],
-    github: 'https://github.com/parharajay001',
-    live: 'https://demo.com',
-    image: Project_1
-  },
+  // {
+  //   title: 'Task Management System',
+  //   description:
+  //     'Collaborative project management tool with drag-and-drop functionality, real-time updates, and team collaboration features. Integrated with REST APIs for seamless data management.',
+  //   tech: ['React', 'TypeScript', 'TailwindCSS', 'ShadCN', 'Jest', 'RESTful APIs'],
+  //   github: 'https://github.com/parharajay001',
+  //   live: 'https://demo.com',
+  //   image: Project_1,
+  // },
+  // {
+  //   title: 'Financial Analytics Platform',
+  //   description:
+  //     'Advanced financial dashboard with interactive charts, portfolio tracking, and market analysis. Features complex data visualizations using Highcharts and real-time data integration.',
+  //   tech: ['React', 'Redux', 'JavaScript', 'Highcharts', 'CSS3', 'REST API'],
+  //   github: 'https://github.com/parharajay001',
+  //   live: 'https://demo.com',
+  //   image: Project_1,
+  // },
+  // {
+  //   title: 'Healthcare Management System',
+  //   description:
+  //     'Patient management system for healthcare providers with appointment scheduling, medical records, and billing integration. Built with focus on security and HIPAA compliance.',
+  //   tech: ['React', 'TypeScript', 'Material-UI', 'Redux', 'Jest', 'RESTful APIs'],
+  //   github: 'https://github.com/parharajay001',
+  //   live: 'https://demo.com',
+  //   image: Project_1,
+  // },
 ];
 
 export const experience = [
@@ -82,28 +112,43 @@ export const experience = [
     duration: 'Mar 2022 - Present',
     location: 'Hydrabad, India',
     responsibilities: [
-      'Led frontend development for 3 major client projects, resulting in 40% improvement in user engagement',
-      'Architected and implemented reusable component library using React and TypeScript, reducing development time by 30%',
-      'Collaborated with cross-functional teams using Agile methodologies and Jira for project management',
-      'Optimized application performance resulting in 50% faster load times using modern React patterns and lazy loading',
-      'Mentored 2 junior developers and conducted code reviews to maintain high code quality standards',
+      'Architected and developed scalable, high-performance web applications using React.js, improving overall application performance and responsiveness.',
+      'Lead the frontend team in adopting modern development practices, resulting in a 25% increase in development efficiency. ',
+      'Designed and implemented reusable React components and UI libraries, reducing development time for new features by 40%. ',
+      'Spearheaded the integration of token-based authentication, ensuring secure access and compliance with industry security standards.',
+      'Conducted comprehensive code reviews and mentored junior developers, fostering a culture of continuous improvement and high code quality.',
+      'Partnered with UX/UI and backend teams in technical discussions to deliver responsive, accessible interfaces with seamless integration and cross-browser compatibility.',
     ],
-    tech: ['React', 'TypeScript', 'Redux', 'Material-UI', 'Jest', 'Git', 'Jira'],
+    tech: [
+      'React',
+      'TypeScript',
+      'Redux',
+      'Material-UI',
+      'Jest',
+      'Git',
+      'Jira',
+      'REST APIs',
+      'Agile',
+      'Highcharts',
+      'VS Code',
+      'Postman',
+      'Bitbucket',
+    ],
   },
-  // {
-  //   company: 'NeetaTech',
-  //   position: 'Software Engineer',
-  //   duration: 'Jan 2021 - July 2021',
-  //   location: 'Pune, India',
-  //   responsibilities: [
-  //     'Developed responsive web applications for 5+ clients using React and modern CSS frameworks',
-  //     'Integrated RESTful APIs and implemented state management using Redux for complex applications',
-  //     'Created interactive data visualizations using Highcharts for business intelligence dashboards',
-  //     'Participated in Agile development process with daily standups and sprint planning',
-  //     'Implemented comprehensive testing strategies using Jest, achieving 85% code coverage',
-  //   ],
-  //   tech: ['React', 'JavaScript', 'CSS3', 'Highcharts', 'Redux', 'REST APIs', 'Agile'],
-  // },
+  {
+    company: 'NeetaTech (Internship)',
+    position: 'Software Engineer',
+    duration: 'Jan 2021 - July 2021',
+    location: 'Pune, India',
+    responsibilities: [
+      'Built frontend components and user interfaces in HTML, CSS, and JavaScript.',
+      'Participated in design meetings to translate mockups into functional UI.',
+      'Gained foundational experience in modern frontend development practices.',
+      // 'Participated in Agile development process with daily standups and sprint planning',
+      // 'Implemented comprehensive testing strategies using Jest, achieving 85% code coverage',
+    ],
+    tech: ['Laravel', 'JavaScript', 'CSS3', 'REST APIs', 'Agile', 'Git', 'VS Code', 'Postman'],
+  },
 ];
 
 export const contactInfo = [
@@ -118,7 +163,7 @@ export const contactInfo = [
 
 export const personalInfo = {
   name: 'Ajay Parhar',
-  role: 'React Developer',
+  role: 'Frontend Developer',
   location: 'Pune, India',
   bio: 'Senior Frontend Developer with 3+ years of experience building scalable, user-centric web applications using React, TypeScript, and modern web technologies.',
   image: ProfilePic,

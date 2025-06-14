@@ -49,7 +49,7 @@ export const About = () => {
           >
             About Me
           </motion.h2>
-          <div className='grid md:grid-cols-2 gap-12 items-center'>
+          <div className='grid md:grid-cols-2 gap-8 items-center'>
             <motion.div
               {...slideIn('left')}
               viewport={{ once: true }}
@@ -72,7 +72,7 @@ export const About = () => {
             </motion.div>
             <motion.div {...slideIn('right')} viewport={{ once: true }} className='space-y-8'>
               <h3 className='text-2xl font-semibold mb-6 text-primary'>Technical Skills</h3>
-              <div className='grid grid-cols-2 sm:grid-cols-3 gap-2'>
+              <div className='grid grid-cols-2 sm:grid-cols-3 gap-3'>
                 {skills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
