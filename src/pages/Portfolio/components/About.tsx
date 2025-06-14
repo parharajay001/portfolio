@@ -1,12 +1,19 @@
 import { MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Parallax } from 'react-parallax';
-import { personalInfo, skills } from '../../../data/portfolioData';
-import { slideIn } from '../../../utils/animations';
 import { AboutBackground } from '../../../assets/images';
-import { BLURVALUE } from '../../../data/portfolio';
+import { skills, personalInfo } from '../../../data/portfolioData';
+import { slideIn } from '../../../utils/animations';
+import * as React from 'react';
+import type { IconBaseProps, IconType } from 'react-icons';
+
+const BLURVALUE = 1;
 
 export const About = () => {
+  const IconComponent = (icon: IconType) => {
+    return React.createElement(icon as React.ComponentType<IconBaseProps>, { size: 20 });
+  };
+
   return (
     <Parallax
       bgImage={AboutBackground}
@@ -65,11 +72,11 @@ export const About = () => {
             </motion.div>
             <motion.div {...slideIn('right')} viewport={{ once: true }} className='space-y-8'>
               <h3 className='text-2xl font-semibold mb-6 text-primary'>Technical Skills</h3>
-              <div className='grid grid-cols-2 sm:grid-cols-3 gap-3'>
+              <div className='grid grid-cols-2 sm:grid-cols-3 gap-2'>
                 {skills.map((skill, index) => (
-                  <motion.span
-                    key={skill}
-                    className='text-foreground-secondary hover:text-primary/50 bg-background-secondary/20 p-3 rounded-lg border border-border hover:border-primary/50 transition-colors shadow-black shadow-md cursor-default'
+                  <motion.div
+                    key={skill.name}
+                    className='text-foreground-secondary hover:text-primary bg-background-secondary/20 p-3 rounded-lg border border-border hover:border-primary transition-colors shadow-black shadow-md cursor-default flex items-center gap-2'
                     initial={{
                       opacity: 0,
                       y: 20,
@@ -82,8 +89,9 @@ export const About = () => {
                     viewport={{ once: true }}
                     whileHover={{ scale: 0.95 }}
                   >
-                    {skill}
-                  </motion.span>
+                    <div className='text-primary'>{skill.Icon && IconComponent(skill.Icon)}</div>
+                    <span>{skill.name}</span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>

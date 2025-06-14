@@ -1,27 +1,39 @@
 import { Github, Mail, Phone } from 'lucide-react';
 import { ProfilePic, Project_1 } from '../assets/images';
+import { FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaBitbucket, FaJira, FaChartArea } from 'react-icons/fa';
+import { SiRedux, SiTypescript, SiJavascript, SiMui, SiTailwindcss, SiJest, SiPostman, SiVite } from 'react-icons/si';
+import { TbBrandVscode } from 'react-icons/tb';
+import { IoSpeedometerOutline } from 'react-icons/io5';
+import { BsKanban } from 'react-icons/bs';
+import { VscGraph } from 'react-icons/vsc';
+import type { IconType } from 'react-icons';
 
-export const skills = [
-  'React',
-  'Redux',
-  'TypeScript',
-  'JavaScript (ES6+)',
-  'HTML5',
-  'CSS3',
-  'Material-UI',
-  'TailwindCSS',
-  'ShadCN',
-  'Jest',
-  'Highcharts',
-  'RESTful APIs',
-  'Git',
-  'GitHub',
-  'Bitbucket',
-  'Jira',
-  'Agile',
-  'Chrome DevTools',
-  'VS Code',
-  'Vite',
+export interface Skill {
+  name: string;
+  Icon: IconType;
+}
+
+export const skills: Skill[] = [
+  { name: 'React', Icon: FaReact },
+  { name: 'Redux', Icon: SiRedux },
+  { name: 'TypeScript', Icon: SiTypescript },
+  { name: 'JavaScript (ES6+)', Icon: SiJavascript },
+  { name: 'HTML5', Icon: FaHtml5 },
+  { name: 'CSS3', Icon: FaCss3Alt },
+  { name: 'Material-UI', Icon: SiMui },
+  { name: 'TailwindCSS', Icon: SiTailwindcss },
+  { name: 'ShadCN', Icon: IoSpeedometerOutline },
+  { name: 'Jest', Icon: SiJest },
+  { name: 'Highcharts', Icon: FaChartArea },
+  { name: 'RESTful APIs', Icon: SiPostman },
+  { name: 'Git', Icon: FaGitAlt },
+  { name: 'GitHub', Icon: FaGithub },
+  { name: 'Bitbucket', Icon: FaBitbucket },
+  { name: 'Jira', Icon: FaJira },
+  { name: 'Agile', Icon: BsKanban },
+  { name: 'Chrome DevTools', Icon: VscGraph },
+  { name: 'VS Code', Icon: TbBrandVscode },
+  { name: 'Vite', Icon: SiVite }
 ];
 
 export const projects = [
