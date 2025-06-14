@@ -92,3 +92,5 @@ export const portfolioData = {
     },
   ],
 };
+
+export const BLURVALUE = 20

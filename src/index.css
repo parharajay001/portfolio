@@ -2,28 +2,93 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    @apply scroll-smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  body {
-    @apply bg-primary text-textPrimary min-h-screen font-sans;
-  }
+:root {
+  --background: 10 25 47;
+  --background-secondary: 17 34 64;
+  --foreground: 204 214 246;
+  --foreground-secondary: 136 146 176;
+  --primary: 100 255 218;
+  --primary-hover: 79 209 179;
+  --border: 30 41 59;
 }
 
-@layer components {
-  .section-title {
-    @apply text-4xl font-bold text-textSecondary mb-8;
-  }
-  
-  .nav-link {
-    @apply cursor-pointer hover:text-secondary transition-colors;
-  }
-  
-  .btn {
-    @apply px-6 py-3 border border-secondary text-secondary rounded hover:bg-secondary/10 transition-colors;
-  }
+.dark {
+  --background: 10 25 47;
+  --background-secondary: 17 34 64;
+  --foreground: 204 214 246;
+  --foreground-secondary: 136 146 176;
+  --primary: 100 255 218;
+  --primary-hover: 79 209 179;
+  --border: 30 41 59;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  transition-property: color, background-color;
+  transition-duration: 200ms;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: rgb(var(--foreground-secondary));
+  margin-bottom: 2rem;
+}
+
+.nav-link {
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: 200ms;
+}
+
+.nav-link:hover {
+  color: rgb(var(--primary));
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgb(var(--primary));
+  color: rgb(var(--primary));
+  border-radius: 0.25rem;
+  transition-property: color, background-color;
+  transition-duration: 200ms;
+}
+
+.btn:hover {
+  background-color: rgb(var(--primary) / 0.1);
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--background-secondary));
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--primary) / 0.3);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--primary) / 0.5);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--primary) / 0.3) rgb(var(--background-secondary));
 }

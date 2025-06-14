@@ -1,18 +1,13 @@
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Portfolio from './pages/Portfolio/Portfolio';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <div className='bg-primary'>
-      <Navigation />
-      <Hero />
-      <Experience />
-      <Projects />
-      <Contact />
-    </div>
+    <ThemeProvider>
+      <div className='bg-background text-foreground min-h-screen'>
+        <Portfolio />
+      </div>
+    </ThemeProvider>
   );
 }
 
