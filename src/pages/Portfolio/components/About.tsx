@@ -1,13 +1,13 @@
 import { MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Parallax } from 'react-parallax';
-import { AboutBackground } from '../../../assets/images';
+// import { Parallax } from 'react-parallax';
+// import { AboutBackground } from '../../../assets/images';
 import { skills, personalInfo } from '../../../data/portfolioData';
 import { slideIn } from '../../../utils/animations';
 import * as React from 'react';
 import type { IconBaseProps, IconType } from 'react-icons';
 
-const BLURVALUE = 1;
+// const BLURVALUE = 1;
 
 export const About = () => {
   const IconComponent = (icon: IconType) => {
@@ -15,23 +15,23 @@ export const About = () => {
   };
 
   return (
-    <Parallax
-      bgImage={AboutBackground}
-      strength={200}
-      blur={BLURVALUE}
-      renderLayer={(percentage) => (
-        <div
-          style={{
-            position: 'absolute',
-            left: '50%',
-            transform: `translate(-50%, ${percentage * 30}px)`,
-            width: '100%',
-          }}
-        >
-          <div className='absolute inset-0 bg-background/80 backdrop-blur-sm' />
-        </div>
-      )}
-    >
+    // <Parallax
+    //   bgImage={AboutBackground}
+    //   strength={200}
+    //   blur={BLURVALUE}
+    //   renderLayer={(percentage) => (
+    //     <div
+    //       style={{
+    //         position: 'absolute',
+    //         left: '50%',
+    //         transform: `translate(-50%, ${percentage * 30}px)`,
+    //         width: '100%',
+    //       }}
+    //     >
+    //       <div className='absolute inset-0 bg-background/80 backdrop-blur-sm' />
+    //     </div>
+    //   )}
+    // >
       <section id='about' className='min-h-screen flex items-center py-20 px-4'>
         <motion.div
           className='max-w-6xl mx-auto relative z-10'
@@ -98,6 +98,6 @@ export const About = () => {
           </div>
         </motion.div>
       </section>
-    </Parallax>
+    // </Parallax>
   );
 };

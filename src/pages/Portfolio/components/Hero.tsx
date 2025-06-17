@@ -1,10 +1,10 @@
 import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Parallax } from 'react-parallax';
+// import { Parallax } from 'react-parallax';
 import { personalInfo } from '../../../data/portfolioData';
 import { fadeInUp, staggerContainer } from '../../../utils/animations';
-import { HeroBackground } from '../../../assets/images';
-import { BLURVALUE } from '../../../data/portfolio';
+// import { HeroBackground } from '../../../assets/images';
+// import { BLURVALUE } from '../../../data/portfolio';
 
 interface HeroProps {
   scrollToSection: (section: string) => void;
@@ -12,23 +12,23 @@ interface HeroProps {
 
 export const Hero = ({ scrollToSection }: HeroProps) => {
   return (
-    <Parallax
-      bgImage={HeroBackground}
-      strength={300}
-      blur={BLURVALUE}
-      renderLayer={(percentage) => (
-        <div
-          style={{
-            position: 'absolute',
-            left: '50%',
-            transform: `translate(-50%, ${percentage * 50}px)`,
-            width: '100%',
-          }}
-        >
-          <div className='absolute inset-0 bg-background/80 backdrop-blur-sm' />
-        </div>
-      )}
-    >
+    // <Parallax
+    //   bgImage={HeroBackground}
+    //   strength={300}
+    //   blur={BLURVALUE}
+    //   renderLayer={(percentage) => (
+    //     <div
+    //       style={{
+    //         position: 'absolute',
+    //         left: '50%',
+    //         transform: `translate(-50%, ${percentage * 50}px)`,
+    //         width: '100%',
+    //       }}
+    //     >
+    //       <div className='absolute inset-0 bg-background/80 backdrop-blur-sm' />
+    //     </div>
+    //   )}
+    // >
       <section
         id='hero'
         className='min-h-screen flex items-center justify-center px-4 pt-16 relative'
@@ -93,6 +93,6 @@ export const Hero = ({ scrollToSection }: HeroProps) => {
           </motion.div>
         </motion.div>
       </section>
-    </Parallax>
+    // </Parallax>
   );
 };

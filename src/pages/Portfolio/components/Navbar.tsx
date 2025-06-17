@@ -84,7 +84,7 @@ export const Navbar = ({
       {isMenuOpen && (
         <motion.div
           className='md:hidden bg-background border-t border-border'
-          variants={fadeIn}
+          variants={{ ...fadeIn }}
           initial='initial'
           animate='animate'
         >
