@@ -1,4 +1,4 @@
-import ProfilePic from './_MG_44242.jpg';
+import ProfilePic from './Profile.jpg';
 import HeroBackground from './backgrounds/hero-bg.webp';
 import AboutBackground from './backgrounds/about-bg.webp';
 import ExperienceBackground from './backgrounds/experience-bg.webp';
