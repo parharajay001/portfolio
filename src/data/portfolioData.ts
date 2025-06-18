@@ -58,7 +58,7 @@ export const projects = [
   {
     title: 'RevolutioM 2.0',
     description:
-      'I had the opportunity to contribute to the development of RevolutioM 2.0, a cutting-edge web application designed exclusively for PepsiCo vendors and distributors. The platform enabled users to perform in-depth analysis, simulations, correlations, and optimizations of sales, profit, and market share at the geographical level. My role involved designing and developing interactive dashboards, charts, and filters that allowed users to effectively visualize and analyze key performance metrics. I collaborated closely with the team to ensure a seamless and intuitive user experience, incorporating client feedback and adhering to best practices in UI/UX design.',
+      'I had the opportunity to contribute to the development of RevolutioM 2.0, a cutting-edge web application designed exclusively for client vendors and distributors. The platform enabled users to perform in-depth analysis, simulations, correlations, and optimizations of sales, profit, and market share at the geographical level. My role involved designing and developing interactive dashboards, charts, and filters that allowed users to effectively visualize and analyze key performance metrics. I collaborated closely with the team to ensure a seamless and intuitive user experience, incorporating client feedback and adhering to best practices in UI/UX design.',
     tech: [
       'React',
       'TypeScript',

@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { Navbar } from './components/Navbar';
 import { Projects } from './components/Projects';
+import { AnimatedBackground } from '../../components/AnimatedBackground';
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -51,7 +52,8 @@ const Portfolio = () => {
     setIsMenuOpen(false);
   };
   return (
-    <div className='min-h-screen bg-background transition-colors duration-200'>
+    <div className='min-h-screen bg-transparent transition-colors duration-200'>
+      <AnimatedBackground />
       <Navbar
         activeSection={activeSection}
         scrollToSection={scrollToSection}

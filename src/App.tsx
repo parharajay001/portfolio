@@ -4,7 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 function App() {
   return (
     <ThemeProvider>
-      <div className='bg-background text-foreground min-h-screen'>
+      <div className='bg-transparent text-foreground min-h-screen'>
         <Portfolio />
       </div>
     </ThemeProvider>

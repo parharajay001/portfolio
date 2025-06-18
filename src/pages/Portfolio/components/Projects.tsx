@@ -1,30 +1,30 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Parallax } from 'react-parallax';
+// import { Parallax } from 'react-parallax';
 import { projects } from '../../../data/portfolioData';
 import { fadeIn } from '../../../utils/animations';
-import { ProjectsBackground } from '../../../assets/images';
-import { BLURVALUE } from '../../../data/portfolio';
+// import { ProjectsBackground } from '../../../assets/images';
+// import { BLURVALUE } from '../../../data/portfolio';
 
 export const Projects = () => {
   return (
-    <Parallax
-      bgImage={ProjectsBackground}
-      strength={200}
-      blur={BLURVALUE}
-      renderLayer={(percentage) => (
-        <div
-          style={{
-            position: 'absolute',
-            left: '50%',
-            transform: `translate(-50%, ${percentage * 30}px)`,
-            width: '100%',
-          }}
-        >
-          <div className='absolute inset-0 bg-background/90 backdrop-blur-sm' />
-        </div>
-      )}
-    >
+    // <Parallax
+    //   bgImage={ProjectsBackground}
+    //   strength={200}
+    //   blur={BLURVALUE}
+    //   renderLayer={(percentage) => (
+    //     <div
+    //       style={{
+    //         position: 'absolute',
+    //         left: '50%',
+    //         transform: `translate(-50%, ${percentage * 30}px)`,
+    //         width: '100%',
+    //       }}
+    //     >
+    //       <div className='absolute inset-0 bg-background/90 backdrop-blur-sm' />
+    //     </div>
+    //   )}
+    // >
       <section id='projects' className='min-h-screen flex items-center py-20 px-4 relative'>
         <motion.div
           className='max-w-4xl mx-auto relative z-10'
@@ -54,9 +54,9 @@ export const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                    className='w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-500'
                   />
-                  <div className='absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+                  <div className='absolute inset-0 bg-background/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
                     <div className='transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex gap-4'>
                       {project?.github && (
                         <motion.a
@@ -115,6 +115,6 @@ export const Projects = () => {
           </div>
         </motion.div>
       </section>
-    </Parallax>
+    // </Parallax>
   );
 };

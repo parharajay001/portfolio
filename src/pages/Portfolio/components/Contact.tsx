@@ -1,29 +1,29 @@
 import { motion } from 'framer-motion';
-import { Parallax } from 'react-parallax';
+// import { Parallax } from 'react-parallax';
 import { Resume } from '../../../assets/pdfs';
 import { contactInfo } from '../../../data/portfolioData';
-import { ContactBackground } from '../../../assets/images';
-import { BLURVALUE } from '../../../data/portfolio';
+// import { ContactBackground } from '../../../assets/images';
+// import { BLURVALUE } from '../../../data/portfolio';
 
 export const Contact = () => {
   return (
-    <Parallax
-      bgImage={ContactBackground}
-      strength={200}
-      blur={BLURVALUE}
-      renderLayer={(percentage) => (
-        <div
-          style={{
-            position: 'absolute',
-            left: '50%',
-            transform: `translate(-50%, ${percentage * 30}px)`,
-            width: '100%',
-          }}
-        >
-          <div className='absolute inset-0 bg-background/80 backdrop-blur-sm' />
-        </div>
-      )}
-    >
+    // <Parallax
+    //   bgImage={ContactBackground}
+    //   strength={200}
+    //   blur={BLURVALUE}
+    //   renderLayer={(percentage) => (
+    //     <div
+    //       style={{
+    //         position: 'absolute',
+    //         left: '50%',
+    //         transform: `translate(-50%, ${percentage * 30}px)`,
+    //         width: '100%',
+    //       }}
+    //     >
+    //       <div className='absolute inset-0 bg-background/80 backdrop-blur-sm' />
+    //     </div>
+    //   )}
+    // >
       <section id='contact' className='min-h-screen flex items-center py-20 px-4 relative'>
         <motion.div
           className='max-w-4xl mx-auto text-center relative z-10'
@@ -124,6 +124,6 @@ export const Contact = () => {
           </motion.div>
         </motion.div>
       </section>
-    </Parallax>
+    // </Parallax>
   );
 };
