@@ -54,9 +54,9 @@ export const Projects = () => {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className='w-full h-full object-cover group-hover:scale-110 transition-transform duration-500'
+                    className='w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-500'
                   />
-                  <div className='absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+                  <div className='absolute inset-0 bg-background/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
                     <div className='transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex gap-4'>
                       {project?.github && (
                         <motion.a

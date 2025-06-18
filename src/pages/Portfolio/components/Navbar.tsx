@@ -44,9 +44,9 @@ export const Navbar = ({
                 onClick={() => scrollToSection(item.toLowerCase())}
                 className={`${
                   activeSection === item.toLowerCase()
-                    ? 'text-primary'
-                    : 'text-foreground hover:text-primary'
-                } transition-colors`}
+                    ? 'text-primary underline underline-offset-8'
+                    : 'text-foreground hover:text-primary hover:underline underline-offset-8'
+                } transition-all`}
               >
                 {item}
               </button>

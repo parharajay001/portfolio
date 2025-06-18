@@ -49,7 +49,7 @@ export const Hero = ({ scrollToSection }: HeroProps) => {
               variants={fadeInUp}
               src={personalInfo.image}
               alt={personalInfo.name}
-              className='w-48 h-48 rounded-full mx-auto mb-6 border-4 border-primary/30 shadow-black shadow-2xl'
+              className='w-36 h-w-36 rounded-full mx-auto mb-6 border-4 border-primary/30 shadow-black shadow-2xl'
               style={{
                 transform: `translateY(${-window.scrollY * 0.2}px)`,
               }}
