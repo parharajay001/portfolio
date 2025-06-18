@@ -15,7 +15,7 @@
     background-image: var(--bg-5);
   }
   100% {
-    background-image: var(--bg-4);
+    background-image: var(--bg-1);
   }
 }
 
@@ -27,12 +27,12 @@
   z-index: -10;
   background-size: cover;
   background-position: center;
-  animation: backgroundChange 20s ease-in-out infinite;
+  animation: backgroundChange 10s ease-in-out infinite;
 }
 
 .background-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.426);
-  backdrop-filter: blur(10px);
+  /* background: rgba(0, 0, 0, 0.426); */
+  /* backdrop-filter: blur(10px); */
 }
