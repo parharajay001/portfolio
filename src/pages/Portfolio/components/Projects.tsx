@@ -27,7 +27,7 @@ export const Projects = () => {
     // >
       <section id='projects' className='min-h-screen flex items-center py-20 px-4 relative'>
         <motion.div
-          className='max-w-4xl mx-auto relative z-10'
+          className='max-w-6xl mx-auto relative z-10'
           {...fadeIn()}
           viewport={{ once: true }}
         >
@@ -50,41 +50,81 @@ export const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: index * 0.2 }}
               >
-                <div className='relative overflow-hidden h-52 group-hover:h-56 transition-all duration-300'>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className='w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-500'
-                  />
-                  <div className='absolute inset-0 bg-background/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
-                    <div className='transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex gap-4'>
-                      {project?.github && (
-                        <motion.a
-                          href={project?.github}
-                          className='bg-primary/90 text-background px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary-hover transition-colors'
-                          whileHover={{ scale: 1.05 }}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          <Github size={18} />
-                          <span>View Code</span>
-                        </motion.a>
-                      )}
-                      {project?.live && (
-                        <motion.a
-                          href={project?.live}
-                          className='bg-primary/90 text-background px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary-hover transition-colors'
-                          whileHover={{ scale: 1.05 }}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          <ExternalLink size={18} />
-                          <span>Live Demo</span>
-                        </motion.a>
-                      )}
+                {project.image ? (
+                  <div className='relative overflow-hidden h-64 group-hover:h-72 transition-all duration-300'>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className='w-full h-full object-cover opacity-70 group-hover:scale-110 transition-transform duration-500'
+                    />
+                    <div className='absolute inset-0 bg-background/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+                      <div className='transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex gap-4'>
+                        {project?.github && (
+                          <motion.a
+                            href={project?.github}
+                            className='bg-primary/90 text-background px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary-hover transition-colors'
+                            whileHover={{ scale: 1.05 }}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <Github size={18} />
+                            <span>View Code</span>
+                          </motion.a>
+                        )}
+                        {project?.live && (
+                          <motion.a
+                            href={project?.live}
+                            className='bg-primary/90 text-background px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary-hover transition-colors'
+                            whileHover={{ scale: 1.05 }}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <ExternalLink size={18} />
+                            <span>Live Demo</span>
+                          </motion.a>
+                        )}
+                      </div>
                     </div>
                   </div>
-                </div>
+                ) : (
+                  <div className='relative overflow-hidden h-64 group-hover:h-72 transition-all duration-300 bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center'>
+                    <div className='text-center'>
+                      <div className='w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center'>
+                        <Github size={32} className='text-primary' />
+                      </div>
+                      <p className='text-primary font-medium'>Project Preview</p>
+                      <p className='text-foreground/70 text-sm mt-1'>Preview Unavailable</p>
+                    </div>
+                    <div className='absolute inset-0 bg-background/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center'>
+                      <div className='transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex gap-4'>
+                        {project?.github && (
+                          <motion.a
+                            href={project?.github}
+                            className='bg-primary/90 text-background px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary-hover transition-colors'
+                            whileHover={{ scale: 1.05 }}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <Github size={18} />
+                            <span>View Code</span>
+                          </motion.a>
+                        )}
+                        {project?.live && (
+                          <motion.a
+                            href={project?.live}
+                            className='bg-primary/90 text-background px-4 py-2 rounded-lg flex items-center gap-2 hover:bg-primary-hover transition-colors'
+                            whileHover={{ scale: 1.05 }}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <ExternalLink size={18} />
+                            <span>Live Demo</span>
+                          </motion.a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <div className='p-8'>
                   <h3 className='text-2xl font-bold text-primary mb-3'>{project.title}</h3>
                   <p className='text-foreground mb-4 leading-relaxed'>{project.description}</p>

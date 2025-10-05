@@ -76,9 +76,9 @@ export const Contact = () => {
                 />
                 <h3 className='text-lg font-semibold text-foreground mb-2'>{item.title}</h3>
                 <p className='text-foreground-secondary hover:text-primary transition-colors'>
-                  {item.title === 'GitHub' ? (
+                  {['GitHub','LinkedIn','Portfolio'].includes(item.title) ? (
                     <a
-                      href={`https://www.${item.content}`}
+                      href={`https://${item.content}`}
                       target='_blank'
                       rel='noopener noreferrer'
                       className='hover:text-primary transition-colors'

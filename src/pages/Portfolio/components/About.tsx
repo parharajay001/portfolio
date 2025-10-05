@@ -2,7 +2,7 @@ import { MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 // import { Parallax } from 'react-parallax';
 // import { AboutBackground } from '../../../assets/images';
-import { skills, personalInfo } from '../../../data/portfolioData';
+import { skills, personalInfo, aboutMe } from '../../../data/portfolioData';
 import { slideIn } from '../../../utils/animations';
 import * as React from 'react';
 import type { IconBaseProps, IconType } from 'react-icons';
@@ -56,14 +56,10 @@ export const About = () => {
               className='space-y-6 text-lg text-foreground-secondary'
             >
               <p>
-                I'm a passionate Frontend Developer with over 3 years of experience specializing in
-                React ecosystem. I love creating intuitive, responsive web applications that provide
-                exceptional user experiences.
+                {aboutMe.p1}
               </p>
               <p>
-                My expertise spans from building complex single-page applications to implementing
-                robust state management solutions. I'm proficient in modern development practices
-                including Test-Driven Development, Agile methodologies, and continuous integration.
+                {aboutMe.p2}
               </p>
               <div className='flex items-center gap-4 text-foreground-secondary'>
                 <MapPin size={20} className='text-primary' />
