@@ -1,4 +1,4 @@
-import { Github, Mail, Phone } from 'lucide-react';
+import { Github, Mail, Phone, Linkedin, Globe } from 'lucide-react';
 import { ProfilePic, Project_1 } from '../assets/images';
 import {
   FaReact,
@@ -9,6 +9,9 @@ import {
   FaBitbucket,
   FaJira,
   FaChartArea,
+  FaNodeJs,
+  FaDocker,
+  FaAws,
 } from 'react-icons/fa';
 import {
   SiRedux,
@@ -19,11 +22,14 @@ import {
   SiJest,
   SiPostman,
   SiVite,
+  SiMongodb,
+  SiExpress,
+  SiMysql,
+  SiMocha,
+  SiWebpack,
 } from 'react-icons/si';
 import { TbBrandVscode } from 'react-icons/tb';
-import { IoSpeedometerOutline } from 'react-icons/io5';
 import { BsKanban } from 'react-icons/bs';
-import { VscGraph } from 'react-icons/vsc';
 import type { IconType } from 'react-icons';
 
 export interface Skill {
@@ -34,14 +40,20 @@ export interface Skill {
 export const skills: Skill[] = [
   { name: 'React', Icon: FaReact },
   { name: 'Redux', Icon: SiRedux },
+  { name: 'Node.js', Icon: FaNodeJs },
+  { name: 'Express.js', Icon: SiExpress },
+  { name: 'MongoDB', Icon: SiMongodb },
+  { name: 'MySQL', Icon: SiMysql },
   { name: 'TypeScript', Icon: SiTypescript },
   { name: 'JavaScript (ES6+)', Icon: SiJavascript },
   { name: 'HTML5', Icon: FaHtml5 },
   { name: 'CSS3', Icon: FaCss3Alt },
   { name: 'Material-UI', Icon: SiMui },
   { name: 'TailwindCSS', Icon: SiTailwindcss },
-  { name: 'ShadCN', Icon: IoSpeedometerOutline },
+  { name: 'AWS S3', Icon: FaAws },
+  { name: 'Docker', Icon: FaDocker },
   { name: 'Jest', Icon: SiJest },
+  { name: 'Mocha', Icon: SiMocha },
   { name: 'Highcharts', Icon: FaChartArea },
   { name: 'RESTful APIs', Icon: SiPostman },
   { name: 'Git', Icon: FaGitAlt },
@@ -49,7 +61,7 @@ export const skills: Skill[] = [
   { name: 'Bitbucket', Icon: FaBitbucket },
   { name: 'Jira', Icon: FaJira },
   { name: 'Agile', Icon: BsKanban },
-  { name: 'Chrome DevTools', Icon: VscGraph },
+  { name: 'Webpack', Icon: SiWebpack },
   { name: 'VS Code', Icon: TbBrandVscode },
   { name: 'Vite', Icon: SiVite },
 ];
@@ -58,71 +70,130 @@ export const projects = [
   {
     title: 'RevolutioM 2.0',
     description:
-      'I had the opportunity to contribute to the development of RevolutioM 2.0, a cutting-edge web application designed exclusively for client vendors and distributors. The platform enabled users to perform in-depth analysis, simulations, correlations, and optimizations of sales, profit, and market share at the geographical level. My role involved designing and developing interactive dashboards, charts, and filters that allowed users to effectively visualize and analyze key performance metrics. I collaborated closely with the team to ensure a seamless and intuitive user experience, incorporating client feedback and adhering to best practices in UI/UX design.',
+      'A cutting-edge web application designed exclusively for client vendors and distributors. The platform enabled users to perform in-depth analysis, simulations, correlations, and optimizations of sales, profit, and market share at the geographical level. My role involved designing and developing interactive dashboards, charts, and filters that allowed users to effectively visualize and analyze key performance metrics.',
     tech: [
       'React',
       'TypeScript',
       'Redux',
       'Material-UI',
+      'Highcharts',
+      'REST APIs',
       'Jest',
       'Git',
       'Jira',
-      'REST APIs',
       'Agile',
-      'Highcharts',
-      'VS Code',
     ],
     github: null,
     live: null,
     image: Project_1,
   },
-  // {
-  //   title: 'Task Management System',
-  //   description:
-  //     'Collaborative project management tool with drag-and-drop functionality, real-time updates, and team collaboration features. Integrated with REST APIs for seamless data management.',
-  //   tech: ['React', 'TypeScript', 'TailwindCSS', 'ShadCN', 'Jest', 'RESTful APIs'],
-  //   github: 'https://github.com/parharajay001',
-  //   live: 'https://demo.com',
-  //   image: Project_1,
-  // },
-  // {
-  //   title: 'Financial Analytics Platform',
-  //   description:
-  //     'Advanced financial dashboard with interactive charts, portfolio tracking, and market analysis. Features complex data visualizations using Highcharts and real-time data integration.',
-  //   tech: ['React', 'Redux', 'JavaScript', 'Highcharts', 'CSS3', 'REST API'],
-  //   github: 'https://github.com/parharajay001',
-  //   live: 'https://demo.com',
-  //   image: Project_1,
-  // },
-  // {
-  //   title: 'Healthcare Management System',
-  //   description:
-  //     'Patient management system for healthcare providers with appointment scheduling, medical records, and billing integration. Built with focus on security and HIPAA compliance.',
-  //   tech: ['React', 'TypeScript', 'Material-UI', 'Redux', 'Jest', 'RESTful APIs'],
-  //   github: 'https://github.com/parharajay001',
-  //   live: 'https://demo.com',
-  //   image: Project_1,
-  // },
+  {
+    title: 'Patient Portal',
+    description:
+      'Healthcare management system for patient records, appointments, and medical information with focus on security and data privacy. Built secure patient authentication with JWT, medical records management, appointment scheduling system, and HIPAA compliant data handling.',
+    tech: [
+      'React',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'JWT',
+      'Material-UI',
+      'Redux',
+      'REST APIs',
+    ],
+    github: null,
+    live: null,
+    image: Project_1,
+  },
+  {
+    title: 'E-Commerce Platform',
+    description:
+      'Full-featured e-commerce system with payment gateway integration, product catalog, and order management. Features include payment gateway integration, product catalog with search and filters, shopping cart and checkout flow, and order tracking and management.',
+    tech: [
+      'React',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Redux',
+      'Payment Gateway',
+      'REST APIs',
+      'Material-UI',
+    ],
+    github: null,
+    live: null,
+    image: Project_1,
+  },
+  {
+    title: 'Real Estate Platform',
+    description:
+      'Comprehensive real estate management platform for property listings, client management, and transaction tracking. Built with modern web technologies to provide seamless user experience for real estate agents and clients.',
+    tech: [
+      'React',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Redux',
+      'Material-UI',
+      'REST APIs',
+      'JWT',
+    ],
+    github: null,
+    live: null,
+    image: Project_1,
+  },
 ];
 
 export const experience = [
   {
-    company: 'Cisconic PVT. LTD.',
-    position: 'Senior Frontend Developer',
-    duration: 'Mar 2022 - Present',
-    location: 'Hydrabad, India',
+    company: 'Spiderweb Technologies',
+    position: 'MERN Stack Developer',
+    duration: 'Jun 2025 - Present',
+    location: 'Canada (Remote)',
     responsibilities: [
-      'Architected and developed scalable, high-performance web applications using React.js, improving overall application performance and responsiveness.',
-      'Lead the frontend team in adopting modern development practices, resulting in a 25% increase in development efficiency. ',
-      'Designed and implemented reusable React components and UI libraries, reducing development time for new features by 40%. ',
-      'Spearheaded the integration of token-based authentication, ensuring secure access and compliance with industry security standards.',
-      'Conducted comprehensive code reviews and mentored junior developers, fostering a culture of continuous improvement and high code quality.',
-      'Partnered with UX/UI and backend teams in technical discussions to deliver responsive, accessible interfaces with seamless integration and cross-browser compatibility.',
+      'Built and maintained scalable web applications using MERN stack (MongoDB, Express.js, React.js, Node.js).',
+      'Integrated multiple payment gateways and handled complex in-app purchase workflows.',
+      'Utilized AWS S3 for secure file uploads/downloads and implemented access control.',
+      'Developed reusable React components and optimized state management using Redux Toolkit.',
+      'Collaborated with QA, DevOps, and product teams to ensure on-time and high-quality delivery.',
+      'Wrote unit and integration tests using Jest and React Testing Library.',
     ],
     tech: [
       'React',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Redux Toolkit',
+      'TypeScript',
+      'AWS S3',
+      'Jest',
+      'Git',
+      'Jira',
+      'REST APIs',
+      'Agile',
+    ],
+  },
+  {
+    company: 'Cisconic Pvt. Ltd.',
+    position: 'Software Engineer',
+    duration: 'Mar 2022 - May 2025',
+    location: 'Hyderabad (Remote)',
+    responsibilities: [
+      'Led full-stack development on complex web platforms including RevolutioM, Patient Portal, Real Estate Platform, and E-Commerce System.',
+      'Built secure RESTful APIs and implemented JWT-based authentication.',
+      'Architected and developed scalable, high-performance web applications using React.js, improving overall application performance and responsiveness.',
+      'Designed and implemented reusable React components and UI libraries, reducing development time for new features by 40%.',
+      'Improved performance with SQL query optimization and backend refactoring.',
+      'Conducted comprehensive code reviews and mentored junior developers, fostering a culture of continuous improvement and high code quality.',
+      'Participated in Agile sprints, retrospectives, and daily standups.',
+    ],
+    tech: [
+      'React',
+      'Node.js',
+      'Express.js',
       'TypeScript',
       'Redux',
+      'MongoDB',
+      'MySQL',
       'Material-UI',
       'Jest',
       'Git',
@@ -130,24 +201,22 @@ export const experience = [
       'REST APIs',
       'Agile',
       'Highcharts',
-      'VS Code',
       'Postman',
       'Bitbucket',
     ],
   },
   {
-    company: 'NeetaTech (Internship)',
-    position: 'Software Engineer',
-    duration: 'Jan 2021 - July 2021',
+    company: 'Neeta-Tech Pvt. Ltd.',
+    position: 'Software Engineer (Intern)',
+    duration: 'Jan 2020 - July 2020',
     location: 'Pune, India',
     responsibilities: [
+      'Developed key modules for Doctor On Door Lifeline project.',
+      'Integrated REST APIs with frontend components.',
+      'Assisted in early-stage development and testing.',
       'Built frontend components and user interfaces in HTML, CSS, and JavaScript.',
-      'Participated in design meetings to translate mockups into functional UI.',
-      'Gained foundational experience in modern frontend development practices.',
-      // 'Participated in Agile development process with daily standups and sprint planning',
-      // 'Implemented comprehensive testing strategies using Jest, achieving 85% code coverage',
     ],
-    tech: ['Laravel', 'JavaScript', 'CSS3', 'REST APIs', 'Agile', 'Git', 'VS Code', 'Postman'],
+    tech: ['JavaScript', 'HTML5', 'CSS3', 'REST APIs', 'Git'],
   },
 ];
 
@@ -159,12 +228,14 @@ export const contactInfo = [
   },
   { icon: Phone, title: 'Phone', content: '+91 7721908843' },
   { icon: Github, title: 'GitHub', content: 'github.com/parharajay001' },
+  { icon: Linkedin, title: 'LinkedIn', content: 'linkedin.com/in/ajay-parhar' },
+  { icon: Globe, title: 'Portfolio', content: 'parharajay001.github.io/portfolio' },
 ];
 
 export const personalInfo = {
-  name: 'Ajay Parhar',
-  role: 'Frontend Developer',
+  name: 'Ajay Ramdas Parhar',
+  role: 'MERN Stack Developer',
   location: 'Pune, India',
-  bio: 'Senior Frontend Developer with 3+ years of experience building scalable, user-centric web applications using React, TypeScript, and modern web technologies.',
+  bio: 'Experienced and results-driven MERN Stack Developer with over 3+ years of expertise in building full-stack web applications using MongoDB, Express.js, React.js, and Node.js. Proven ability in developing scalable RESTful APIs, dynamic frontends, and secure backends with strong focus on clean architecture and performance optimization.',
   image: ProfilePic,
 };
