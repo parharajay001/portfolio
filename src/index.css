@@ -2,24 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 10 25 47;
-  --background-secondary: 17 34 64;
-  --foreground: 204 214 246;
-  --foreground-secondary: 136 146 176;
-  --primary: 156 152 255;
-  --primary-hover: 156 152 255;
-  --border: 30 41 59;
+:root,
+.dark {
+  --background: 10 14 10;
+  --background-secondary: 15 21 15;
+  --foreground: 207 232 207;
+  --foreground-secondary: 143 174 143;
+  --primary: 127 255 168;
+  --primary-hover: 95 224 137;
+  --accent: 255 184 108;
+  --dim: 90 106 90;
+  --border: 28 42 28;
 }
 
-.dark {
-  --background: 10 25 47;
-  --background-secondary: 17 34 64;
-  --foreground: 204 214 246;
-  --foreground-secondary: 136 146 176;
-  --primary: 156 152 255;
-  --primary-hover: 156 152 255;
-  --border: 30 41 59;
+.light {
+  --background: 244 241 232;
+  --background-secondary: 233 228 214;
+  --foreground: 28 58 36;
+  --foreground-secondary: 74 106 82;
+  --primary: 19 122 67;
+  --primary-hover: 14 97 53;
+  --accent: 176 106 31;
+  --dim: 106 122 106;
+  --border: 214 208 189;
 }
 
 html {
@@ -32,7 +37,7 @@ body {
   background-color: rgb(var(--background));
   color: rgb(var(--foreground));
   min-height: 100vh;
-  font-family: system-ui, sans-serif;
+  font-family: '"IBM Plex Sans"', ui-sans-serif, system-ui, sans-serif;
   transition-property: color, background-color;
   transition-duration: 200ms;
 }
@@ -91,4 +96,24 @@ body {
 * {
   scrollbar-width: thin;
   scrollbar-color: rgb(var(--primary) / 0.3) rgb(var(--background-secondary));
+}
+
+/* Terminal utilities */
+.font-mono { font-family: '"JetBrains Mono"', ui-monospace, Consolas, monospace; }
+
+.terminal-cursor::after {
+  content: '▋';
+  color: rgb(var(--primary));
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.prompt::before {
+  content: '$ ';
+  color: rgb(var(--primary));
+}
+
+.section-title {
+  font-family: '"JetBrains Mono"', monospace;
+  color: rgb(var(--foreground));
 }

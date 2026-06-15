@@ -20,7 +20,13 @@ module.exports = {
           DEFAULT: 'rgb(var(--primary) / <alpha-value>)',
           hover: 'rgb(var(--primary-hover) / <alpha-value>)',
         },
+        accent: 'rgb(var(--accent) / <alpha-value>)',
+        dim: 'rgb(var(--dim) / <alpha-value>)',
         border: 'rgb(var(--border) / <alpha-value>)',
+      },
+      fontFamily: {
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'Consolas', 'monospace'],
+        sans: ['"IBM Plex Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
   },
