@@ -1,134 +1,80 @@
-import { Building, Calendar, MapPin } from 'lucide-react';
-import { motion } from 'framer-motion';
-// import { Parallax } from 'react-parallax';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight } from 'lucide-react';
 import { experience } from '../../../data/portfolioData';
-import { fadeIn } from '../../../utils/animations';
-// import { ExperienceBackground } from '../../../assets/images';
-// import { BLURVALUE } from '../../../data/portfolio';
 
 export const Experience = () => {
+  const [open, setOpen] = useState<number | null>(0);
+
   return (
-    // <Parallax
-    //   bgImage={ExperienceBackground}
-    //   strength={200}
-    //   blur={BLURVALUE}
-    //   renderLayer={(percentage) => (
-    //     <div
-    //       style={{
-    //         position: 'absolute',
-    //         left: '50%',
-    //         transform: `translate(-50%, ${percentage * 40}px)`,
-    //         width: '100%',
-    //       }}
-    //     >
-    //       <div className='absolute inset-0 bg-background/80 backdrop-blur-sm' />
-    //     </div>
-    //   )}
-    // >
-      <section id='experience' className='min-h-screen flex items-center py-20 px-4 relative'>
-        <motion.div
-          className='max-w-6xl mx-auto relative z-10'
-          {...fadeIn()}
+    <section id="experience" className="py-24 px-4">
+      <div className="max-w-5xl mx-auto">
+        <motion.h2
+          className="section-title text-2xl md:text-3xl font-bold mb-10 prompt"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
         >
-          <motion.h2
-            className='text-4xl font-bold text-center mb-16 text-foreground'
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            Work Experience
-          </motion.h2>
-          <div className='space-y-12'>
-            {experience.map((job, index) => (
-              <motion.div
-                key={job.company}
-                className='bg-background-secondary/50 backdrop-blur-sm rounded-xl p-8 border border-border hover:border-primary/50 transition-all shadow-black shadow-2xl'
-                initial={{
-                  opacity: 0,
-                  scale: 0.8,
-                  transition: { duration: 0.5, delay: index * 0.3 },
-                }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                viewport={{ once: true }}
-                whileHover={{
-                  scale: 1.02,
-                }}
-              >
-                <div className='flex flex-col md:flex-row md:items-center justify-between mb-6'>
-                  <div>
-                    <h3 className='text-2xl font-bold text-primary mb-2'>{job.position}</h3>
-                    <div className='flex items-center gap-2 text-foreground mb-2'>
-                      <Building size={18} className='text-primary' />
-                      <span className='text-lg font-semibold'>{job.company}</span>
-                    </div>
-                  </div>
-                  <div className='text-right'>
-                    <div className='flex items-center gap-2 text-foreground-secondary mb-1'>
-                      <Calendar size={16} className='text-primary' />
-                      <span>{job.duration}</span>
-                    </div>
-                    <div className='flex items-center gap-2 text-foreground-secondary'>
-                      <MapPin size={16} className='text-primary' />
-                      <span>{job.location}</span>
-                    </div>
-                  </div>
-                </div>
+          git log --experience
+        </motion.h2>
 
-                <div className='mb-6'>
-                  <h4 className='text-lg font-semibold text-foreground mb-3'>
-                    Key Responsibilities:
-                  </h4>
-                  <ul className='space-y-2'>
-                    {job.responsibilities.map((responsibility, respIndex) => (
-                      <motion.li
-                        key={responsibility}
-                        className='text-foreground-secondary flex items-start gap-2'
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: respIndex * 0.2 }}
-                      >
-                        <span className='text-primary'>•</span>
-                        <span>{responsibility}</span>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div>
-                  <h4 className='text-lg font-semibold text-foreground mb-3'>Technologies Used:</h4>
-                  <div className='flex flex-wrap gap-3'>
-                    {job.tech.map((item, techIndex) => (
-                      <motion.span
-                        key={item}
-                        className='bg-primary/10 text-primary px-3 py-1 rounded-full text-sm border border-primary/30 shadow-black shadow-md cursor-default'
-                        initial={{
-                          opacity: 0,
-                          y: 20,
-                        }}
-                        whileInView={{
-                          opacity: 1,
-                          y: 0,
-                          transition: { duration: 0.3, delay: techIndex * 0.1 },
-                        }}
-                        viewport={{ once: true }}
-                        whileHover={{ scale: 1.1 }}
-                      >
-                        {item}
-                      </motion.span>
-                    ))}
+        <div className="space-y-4">
+          {experience.map((exp, i) => {
+            const isOpen = open === i;
+            return (
+              <div key={exp.company} className="rounded-lg border border-border bg-background-secondary/50 overflow-hidden">
+                <button
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="w-full flex items-start gap-3 p-5 text-left"
+                >
+                  <ChevronRight
+                    size={18}
+                    className={`text-primary mt-1 shrink-0 transition-transform ${isOpen ? 'rotate-90' : ''}`}
+                  />
+                  <div className="flex-1">
+                    <div className="font-mono text-foreground font-bold">{exp.position}</div>
+                    <div className="font-mono text-primary text-sm">{exp.company}</div>
+                    <div className="font-mono text-dim text-xs mt-1">
+                      {exp.duration} · {exp.location}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
-    // </Parallax>
+                </button>
+
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-5 pb-5 pl-12">
+                        <ul className="space-y-2 font-sans text-foreground-secondary text-sm">
+                          {exp.responsibilities.map((r, j) => (
+                            <li key={j} className="flex gap-2">
+                              <span className="text-primary font-mono">›</span>
+                              <span>{r}</span>
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          {exp.tech.map((t) => (
+                            <span key={t} className="font-mono text-xs px-2 py-1 rounded bg-background border border-border text-dim">
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
   );
 };
