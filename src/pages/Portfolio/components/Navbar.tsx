@@ -1,131 +1,74 @@
-import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Moon, Sun, Download } from 'lucide-react';
+import { useTheme } from '../../../context/ThemeContext';
 import { personalInfo } from '../../../data/portfolioData';
-import { fadeIn } from '../../../utils/animations';
-import { Resume } from '../../../assets/pdfs';
-// import { useTheme } from '../../../context/ThemeContext';
 
 interface NavbarProps {
   activeSection: string;
   scrollToSection: (section: string) => void;
   isMenuOpen: boolean;
-  setIsMenuOpen: (isOpen: boolean) => void;
+  setIsMenuOpen: (open: boolean) => void;
 }
 
-export const Navbar = ({
-  activeSection,
-  scrollToSection,
-  isMenuOpen,
-  setIsMenuOpen,
-}: NavbarProps) => {
-  const navItems = ['Hero', 'About', 'Experience', 'Projects', 'Contact'];
-  // const { theme, toggleTheme } = useTheme();
+const sections = ['about', 'skills', 'experience', 'projects', 'education', 'contact'];
+
+export const Navbar = ({ activeSection, scrollToSection, isMenuOpen, setIsMenuOpen }: NavbarProps) => {
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <motion.nav
-      className='fixed top-0 w-full bg-background/20 backdrop-blur-sm z-50 border-b border-border'
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center py-4'>
-          <button
-            onClick={() => scrollToSection('hero')}
-            className='text-2xl font-bold text-foreground hover:text-primary transition-colors'
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-md font-mono">
+      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-14">
+        <button onClick={() => scrollToSection('hero')} className="text-primary text-sm font-bold">
+          ~/ajay-parhar<span className="terminal-cursor" />
+        </button>
+
+        <div className="hidden md:flex items-center gap-5 text-sm">
+          {sections.map((s) => (
+            <button
+              key={s}
+              onClick={() => scrollToSection(s)}
+              className={`transition-colors hover:text-primary ${activeSection === s ? 'text-primary' : 'text-foreground-secondary'}`}
+            >
+              ./{s}
+            </button>
+          ))}
+          <a
+            href={personalInfo.resume}
+            download
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded border border-primary text-primary hover:bg-primary hover:text-background transition-colors"
           >
-            {personalInfo.name}
+            <Download size={14} /> resume
+          </a>
+          <button onClick={toggleTheme} aria-label="Toggle theme" className="text-foreground-secondary hover:text-primary">
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
           </button>
+        </div>
 
-          <div className='hidden md:flex space-x-8'>
-            {navItems.map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className={`${
-                  activeSection === item.toLowerCase()
-                    ? 'text-primary underline underline-offset-8'
-                    : 'text-foreground hover:text-primary hover:underline underline-offset-8'
-                } transition-all`}
-              >
-                {item}
-              </button>
-            ))}
-            {/* Theme toggle button */}
-            {/* <button
-              onClick={toggleTheme}
-              className='p-2 rounded-lg bg-background-secondary text-foreground hover:text-primary transition-colors'
-              aria-label='Toggle theme'
-            >
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-            </button> */}
-            <motion.button
-              className='px-8 py-2 bg-primary text-background rounded-lg font-semibold hover:bg-primary-hover transform transition-all'
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <a href={Resume} download>
-                Download Resume
-              </a>
-            </motion.button>
-          </div>
-
-          <button
-            className='md:hidden text-foreground hover:text-primary transition-colors'
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label='Toggle menu'
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        <div className="md:hidden flex items-center gap-3">
+          <button onClick={toggleTheme} aria-label="Toggle theme" className="text-foreground-secondary hover:text-primary">
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Menu" className="text-foreground">
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isMenuOpen && (
-        <motion.div
-          className='md:hidden bg-background border-t border-border'
-          variants={{ ...fadeIn }}
-          initial='initial'
-          animate='animate'
-        >
-          <div className='px-4 pt-2 pb-4 space-y-2'>
-            {navItems.map((item) => (
-              <button
-                key={item}
-                onClick={() => {
-                  scrollToSection(item.toLowerCase());
-                  setIsMenuOpen(false);
-                }}
-                className={`block w-full text-left px-3 py-2 rounded-lg ${
-                  activeSection === item.toLowerCase()
-                    ? 'text-primary bg-background-secondary'
-                    : 'text-foreground hover:text-primary hover:bg-background-secondary'
-                } transition-colors`}
-              >
-                {item}
-              </button>
-            ))}
-            {/* Theme toggle button */}
-            {/* <button
-              onClick={toggleTheme}
-              className={`block w-full text-left px-3 py-2 rounded-lg ${'text-foreground hover:text-primary hover:bg-background-secondary'} transition-colors`}
-              aria-label='Toggle theme'
+        <div className="md:hidden border-t border-border bg-background/95 px-4 py-3 flex flex-col gap-3 text-sm">
+          {sections.map((s) => (
+            <button
+              key={s}
+              onClick={() => scrollToSection(s)}
+              className={`text-left transition-colors hover:text-primary ${activeSection === s ? 'text-primary' : 'text-foreground-secondary'}`}
             >
-              {theme === 'dark' ? (
-                <div className='flex items-center gap-2'>
-                  Light
-                  <Sun size={20} />
-                </div>
-              ) : (
-                <div className='flex items-center gap-2'>
-                  Dark
-                  <Moon size={20} />
-                </div>
-              )}
-            </button> */}
-          </div>
-        </motion.div>
+              ./{s}
+            </button>
+          ))}
+          <a href={personalInfo.resume} download className="flex items-center gap-1.5 text-primary">
+            <Download size={14} /> download resume.pdf
+          </a>
+        </div>
       )}
-    </motion.nav>
+    </nav>
   );
 };
