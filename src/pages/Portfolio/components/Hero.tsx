@@ -1,10 +1,6 @@
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-// import { Parallax } from 'react-parallax';
-import { personalInfo } from '../../../data/portfolioData';
-import { fadeInUp, staggerContainer } from '../../../utils/animations';
-// import { HeroBackground } from '../../../assets/images';
-// import { BLURVALUE } from '../../../data/portfolio';
+import { personalInfo, stats } from '../../../data/portfolioData';
 
 interface HeroProps {
   scrollToSection: (section: string) => void;
@@ -12,87 +8,66 @@ interface HeroProps {
 
 export const Hero = ({ scrollToSection }: HeroProps) => {
   return (
-    // <Parallax
-    //   bgImage={HeroBackground}
-    //   strength={300}
-    //   blur={BLURVALUE}
-    //   renderLayer={(percentage) => (
-    //     <div
-    //       style={{
-    //         position: 'absolute',
-    //         left: '50%',
-    //         transform: `translate(-50%, ${percentage * 50}px)`,
-    //         width: '100%',
-    //       }}
-    //     >
-    //       <div className='absolute inset-0 bg-background/80 backdrop-blur-sm' />
-    //     </div>
-    //   )}
-    // >
-      <section
-        id='hero'
-        className='min-h-screen flex items-center justify-center px-4 pt-16 relative'
+    <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-16 relative">
+      <motion.div
+        className="max-w-3xl w-full mx-auto relative z-10 font-mono"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
       >
-        <motion.div
-          className='max-w-4xl mx-auto text-center relative z-10'
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <motion.div
-            className='mb-8'
-            variants={staggerContainer}
-            initial='initial'
-            animate='animate'
+        <p className="text-primary text-sm prompt">whoami</p>
+
+        <h1 className="mt-4 text-4xl md:text-6xl font-extrabold text-foreground leading-tight">
+          {personalInfo.role}
+          <span className="terminal-cursor" />
+        </h1>
+
+        <p className="mt-3 text-accent text-sm md:text-base">{personalInfo.title}</p>
+
+        <p className="mt-6 font-sans text-foreground-secondary text-base md:text-lg leading-relaxed">
+          {personalInfo.bio}
+        </p>
+
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3">
+          {stats.map((s) => (
+            <div key={s.label} className="rounded-md border border-border bg-background-secondary/60 px-3 py-3">
+              <div className="text-primary text-lg font-bold">{s.value}</div>
+              <div className="text-dim text-xs mt-1">{s.label}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <button
+            onClick={() => scrollToSection('projects')}
+            className="px-5 py-2.5 rounded bg-primary text-background font-semibold hover:bg-primary-hover transition-colors prompt-btn"
           >
-            <motion.img
-              variants={fadeInUp}
-              src={personalInfo.image}
-              alt={personalInfo.name}
-              className='w-48 h-w-48 rounded-full mx-auto mb-6 border-4 border-primary/30 shadow-black shadow-2xl'
-              style={{
-                transform: `translateY(${-window.scrollY * 0.2}px)`,
-              }}
-            />
-            <motion.h1 variants={fadeInUp} className='text-5xl md:text-7xl font-bold mb-6'>
-              <span className='text-foreground bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-hover'>
-                {personalInfo.role}
-              </span>
-            </motion.h1>
-            <motion.p
-              variants={fadeInUp}
-              className='text-xl md:text-2xl text-foreground-secondary mb-8 max-w-3xl mx-auto'
-            >
-              {personalInfo.bio}
-            </motion.p>
-            <motion.div
-              variants={fadeInUp}
-              className='flex flex-col sm:flex-row gap-4 justify-center'
-            >
-              <button
-                onClick={() => scrollToSection('projects')}
-                className='px-8 py-3 bg-primary text-background rounded-lg font-semibold hover:bg-primary-hover transform hover:scale-105 transition-all shadow-black shadow-2xl'
-              >
-                View My Work
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className='px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-background transition-all shadow-black shadow-2xl'
-              >
-                Get In Touch
-              </button>
-            </motion.div>
-          </motion.div>
-          <motion.div
-            className='animate-bounce'
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.5 }}
+            view --projects
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="px-5 py-2.5 rounded border border-primary text-primary font-semibold hover:bg-primary hover:text-background transition-colors"
           >
-            <ChevronDown className='mx-auto text-primary' size={32} />
-          </motion.div>
-        </motion.div>
-      </section>
-    // </Parallax>
+            contact --me
+          </button>
+          <a
+            href={personalInfo.resume}
+            download
+            className="px-5 py-2.5 rounded border border-border text-foreground-secondary font-semibold hover:border-primary hover:text-primary transition-colors flex items-center gap-2 justify-center"
+          >
+            <Download size={16} /> resume.pdf
+          </a>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.5 }}
+      >
+        <ChevronDown className="text-primary" size={28} />
+      </motion.div>
+    </section>
   );
 };
