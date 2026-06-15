@@ -1,172 +1,390 @@
-import { Github, Mail, Phone, Linkedin, Globe } from "lucide-react";
-import { ProfilePic, Project_1, Patient_Portal, E_Com } from "../assets/images";
-import { FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaBitbucket, FaJira, FaChartArea, FaNodeJs, FaDocker, FaAws } from "react-icons/fa";
-import { SiRedux, SiTypescript, SiJavascript, SiMui, SiTailwindcss, SiJest, SiPostman, SiVite, SiMongodb, SiExpress, SiMysql, SiMocha, SiWebpack } from "react-icons/si";
-import { TbBrandVscode } from "react-icons/tb";
-import { BsKanban } from "react-icons/bs";
-import type { IconType } from "react-icons";
+import { Github, Mail, Phone, Linkedin, Globe, FileText } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
+import { ProfilePic, Project_1, Patient_Portal, E_Com } from '../assets/images';
+import { Resume } from '../assets/pdfs';
+import {
+  FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaGitlab, FaBitbucket,
+  FaJira, FaChartArea, FaNodeJs, FaDocker, FaAws,
+} from 'react-icons/fa';
+import {
+  SiRedux, SiTypescript, SiJavascript, SiMui, SiTailwindcss, SiJest,
+  SiPostman, SiVite, SiMongodb, SiExpress, SiMysql, SiPostgresql,
+  SiSwagger, SiNextdotjs, SiSass, SiOpenai, SiWebpack,
+} from 'react-icons/si';
+import { TbBrandVscode, TbApi, TbBrandAzure } from 'react-icons/tb';
+import { BsKanban, BsFingerprint, BsShieldLock } from 'react-icons/bs';
+import { RiRobot2Line } from 'react-icons/ri';
+import { MdPayment } from 'react-icons/md';
+import type { IconType } from 'react-icons';
 
 export interface Skill {
   name: string;
   Icon: IconType;
 }
 
-export const aboutMe = {
-  p1: `I'm a passionate MERN stack developer with over 3 years of experience specializing in
-                React ecosystem. I love creating intuitive, responsive web applications that provide
-                exceptional user experiences.`,
-  p2: `My expertise spans from building complex single-page applications to implementing
-                robust state management solutions. I'm proficient in modern development practices
-                including Test-Driven Development, Agile methodologies, and continuous integration.`,
-};
+export interface SkillCategory {
+  name: string;
+  skills: Skill[];
+}
 
-export const skills: Skill[] = [
-  { name: "React", Icon: FaReact },
-  { name: "Redux", Icon: SiRedux },
-  { name: "Node.js", Icon: FaNodeJs },
-  { name: "Express.js", Icon: SiExpress },
-  { name: "MongoDB", Icon: SiMongodb },
-  { name: "MySQL", Icon: SiMysql },
-  { name: "TypeScript", Icon: SiTypescript },
-  { name: "JavaScript (ES6+)", Icon: SiJavascript },
-  { name: "HTML5", Icon: FaHtml5 },
-  { name: "CSS3", Icon: FaCss3Alt },
-  { name: "Material-UI", Icon: SiMui },
-  { name: "TailwindCSS", Icon: SiTailwindcss },
-  { name: "AWS S3", Icon: FaAws },
-  { name: "Docker", Icon: FaDocker },
-  { name: "Jest", Icon: SiJest },
-  { name: "Mocha", Icon: SiMocha },
-  { name: "Highcharts", Icon: FaChartArea },
-  { name: "RESTful APIs", Icon: SiPostman },
-  { name: "Git", Icon: FaGitAlt },
-  { name: "GitHub", Icon: FaGithub },
-  { name: "Bitbucket", Icon: FaBitbucket },
-  { name: "Jira", Icon: FaJira },
-  { name: "Agile", Icon: BsKanban },
-  { name: "Webpack", Icon: SiWebpack },
-  { name: "VS Code", Icon: TbBrandVscode },
-  { name: "Vite", Icon: SiVite },
-];
+export interface ExperienceItem {
+  company: string;
+  position: string;
+  duration: string;
+  location: string;
+  responsibilities: string[];
+  tech: string[];
+}
 
-export const projects = [
-  {
-    title: "RevolutioM 2.0",
-    description:
-      "A comprehensive business intelligence web application engineered specifically for client vendors and distributors to drive data-driven decision making. The platform empowered users to conduct sophisticated analysis, predictive simulations, statistical correlations, and strategic optimizations across sales performance, profit margins, and market share dynamics at granular geographical levels (country, state, city, and territory). As a key frontend developer, I architected and implemented highly interactive, responsive dashboards featuring data visualization through advanced Highcharts integration. I developed complex filtering systems enabling multi-dimensional data exploration, built dynamic drill-down capabilities for hierarchical data analysis, and created intuitive user interfaces that transformed complex datasets into actionable business insights. The platform included advanced features such as comparative analysis tools, trend forecasting modules, performance benchmarking systems, and automated report generation. My contributions significantly improved user engagement and decision-making efficiency for stakeholders across multiple business verticals.",
-    tech: ["React", "TypeScript", "Redux", "Material-UI", "Highcharts", "REST APIs", "Jest", "Git", "Jira", "Agile"],
-    github: null,
-    live: null,
-    image: Project_1,
-  },
-  {
-    title: "IVF Patient Management Portal",
-    description:
-      "A comprehensive patient management application developed using the MERN stack (MySQL, Express.js, React, and Node.js) specifically designed for tracking and supporting IVF (In Vitro Fertilization) treatments. The application enables both patients and healthcare providers to efficiently manage key aspects of the IVF process through an intuitive and responsive interface. Key features include a visual treatment progress timeline with color-coded milestones, appointment scheduling system, real-time medication tracking, billing details management, and drug monitoring sections. The front-end built with React provides an interactive user experience, while the Node.js and Express.js backend ensures seamless communication with MySQL database for secure and efficient data storage. This project enhances the IVF treatment process by offering transparency, convenience, and real-time tracking capabilities for patients throughout their treatment journey.",
-    tech: ["React", "Node.js", "Express.js", "MySQL", "JWT", "Material-UI", "Redux", "REST APIs", "Real-time Tracking", "Timeline UI"],
-    github: null,
-    live: null,
-    image: Patient_Portal,
-  },
-  {
-    title: "Vegetables E-Commerce Platform",
-    description:
-      "A comprehensive full-stack e-commerce platform developed for the vegetables and fresh produce industry, designed to provide customers with a seamless online shopping experience for a wide range of fresh vegetables and produce. I worked on both frontend and backend development, building the complete application architecture using modern web technologies. The platform features dynamic product listings, advanced category filters for browsing vegetables by type, attribute-based filtering (freshness, organic, seasonal availability), detailed product pages with comprehensive nutritional information and freshness indicators, and a responsive shopping cart system optimized for mobile-friendly experience. On the backend, I developed RESTful APIs for product management, user authentication, order processing, and inventory management. The project includes secure payment gateway integrations to handle online transactions, ensuring safe and reliable payment processing for customers. I implemented robust server-side logic for order management, user authentication systems, and database design for efficient product catalog management. The frontend was built with React to ensure an intuitive and visually appealing interface for fresh produce shopping, while the backend provided scalable and secure API endpoints. This project showcased my full-stack development expertise in creating complete e-commerce solutions with secure payment processing tailored for fresh vegetables and produce retail customers.",
-    tech: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "JavaScript",
-      "MongoDB",
-      "CSS3",
-      "HTML5",
-      "Payment Gateway Integration",
-      "REST APIs",
-      "JWT",
-      "Responsive Design",
-      "UI/UX Design",
-      "Product Catalog",
-      "Shopping Cart",
-      "Order Management",
-    ],
-    github: null,
-    live: null,
-    image: E_Com,
-  },
-  {
-    title: "Real Estate Management Platform",
-    description:
-      "A comprehensive real estate management application developed using the MERN stack (MySQL, Express.js, React, and Node.js) designed to simplify and streamline the management of customers, properties, sites, towers, and flats. The platform provides a centralized solution for real estate developers, agents, and customers to manage various aspects of the real estate process. Key features include property viewing capabilities with detailed information about flats within specific towers, customer inquiry management, booking and transaction handling, and real-time data synchronization. The application ensures data consistency and seamless integration between different platform components. My role involved developing both the intuitive front-end user interface and robust back-end functionality for managing real estate listings and customer data. This project is currently in active development, focusing on enhancing user experience and expanding platform capabilities.",
-    tech: ["React", "Node.js", "Express.js", "MySQL", "Redux", "Material-UI", "REST APIs", "JWT", "Real-time Updates", "Property Management"],
-    github: null,
-    live: null,
-    image: null,
-  },
-];
+export interface Project {
+  name: string;
+  description: string;
+  tech: string[];
+  github: string | null;
+  live: string | null;
+  image?: string;
+  draft?: boolean;
+}
 
-export const experience = [
-  {
-    company: "Spiderweb Technologies",
-    position: "MERN Stack Developer",
-    duration: "June 2025 - Present",
-    location: "Canada (Remote)",
-    responsibilities: [
-      "Built and maintained scalable web applications using MERN stack (MongoDB, Express.js, React.js, Node.js).",
-      "Integrated multiple payment gateways and handled complex in-app purchase workflows.",
-      "Utilized AWS S3 for secure file uploads/downloads and implemented access control.",
-      "Developed reusable React components and optimized state management using Redux Toolkit.",
-      "Collaborated with QA, DevOps, and product teams to ensure on-time and high-quality delivery.",
-      "Wrote unit and integration tests using Jest and React Testing Library.",
-    ],
-    tech: ["React", "Node.js", "Express.js", "MongoDB", "Redux Toolkit", "TypeScript", "AWS S3", "Jest", "Git", "Jira", "REST APIs", "Agile"],
-  },
-  {
-    company: "Cisconic Pvt. Ltd.",
-    position: "Software Engineer",
-    duration: "Mar 2022 - May 2025",
-    location: "Hyderabad (Remote)",
-    responsibilities: [
-      "Led full-stack development on complex web platforms including RevolutioM, Patient Portal, Real Estate Platform, and E-Commerce System.",
-      "Built secure RESTful APIs and implemented JWT-based authentication.",
-      "Architected and developed scalable, high-performance web applications using React.js, improving overall application performance and responsiveness.",
-      "Designed and implemented reusable React components and UI libraries, reducing development time for new features by 40%.",
-      "Improved performance with SQL query optimization and backend refactoring.",
-      "Conducted comprehensive code reviews and mentored junior developers, fostering a culture of continuous improvement and high code quality.",
-      "Participated in Agile sprints, retrospectives, and daily standups.",
-    ],
-    tech: ["React", "Node.js", "Express.js", "TypeScript", "Redux", "MongoDB", "MySQL", "Material-UI", "Jest", "Git", "Jira", "REST APIs", "Agile", "Highcharts", "Postman", "Bitbucket"],
-  },
-  {
-    company: "Neeta-Tech Pvt. Ltd.",
-    position: "Software Engineer (Intern)",
-    duration: "Jan 2020 - July 2020",
-    location: "Pune, India",
-    responsibilities: [
-      "Developed key modules for Doctor On Door Lifeline project.",
-      "Integrated REST APIs with frontend components.",
-      "Assisted in early-stage development and testing.",
-      "Built frontend components and user interfaces in HTML, CSS, and JavaScript.",
-    ],
-    tech: ["JavaScript", "HTML5", "CSS3", "REST APIs", "Git"],
-  },
-];
+export interface ProjectGroup {
+  category: string;
+  label: string;
+  projects: Project[];
+}
 
-export const contactInfo = [
-  {
-    icon: Mail,
-    title: "Email",
-    content: "parharajay001@gmail.com",
-  },
-  { icon: Phone, title: "Phone", content: "+91 7721908843" },
-  { icon: Github, title: "GitHub", content: "www.github.com/parharajay001" },
-  { icon: Linkedin, title: "LinkedIn", content: "www.linkedin.com/in/ajay-parhar" },
-  { icon: Globe, title: "Portfolio", content: "parharajay001.github.io/portfolio" },
-];
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  university: string;
+  years: string;
+}
+
+export interface ContactItem {
+  icon: LucideIcon;
+  title: string;
+  content: string;
+  href: string;
+}
 
 export const personalInfo = {
-  name: "Ajay Parhar",
-  role: "MERN Stack Developer",
-  location: "Pune, India",
-  bio: "Experienced and results-driven MERN Stack Developer with over 3+ years of expertise in building full-stack web applications using MongoDB, Express.js, React.js, and Node.js. Proven ability in developing scalable RESTful APIs, dynamic frontends, and secure backends with strong focus on clean architecture and performance optimization.",
+  name: 'Ajay Ramdas Parhar',
+  role: 'Senior MERN Stack Developer',
+  title: 'MERN Stack Developer | React | Next.js | Node.js | TypeScript | AWS | Docker',
+  location: 'Pune, Maharashtra, India',
+  email: 'parharajay001@gmail.com',
+  phone: '+91-7721908843',
+  linkedin: 'https://www.linkedin.com/in/ajay-parhar',
+  github: 'https://github.com/parharajay001',
+  portfolio: 'https://parharajay001.github.io/portfolio',
+  resume: Resume,
+  bio: `Experienced and results-driven Senior MERN Stack Developer with 4+ years building scalable, high-performance web applications using MongoDB, Express.js, React.js, Node.js, and Next.js. Strong in TypeScript, clean architecture, payment-gateway and in-app-purchase integration, AWS (S3, EC2, Docker), and secure authentication (JWT, OAuth, biometric). Adept at AI-assisted development workflows with Claude Code and OpenAI Codex.`,
   image: ProfilePic,
 };
+
+export const stats = [
+  { label: 'Years Experience', value: '4+' },
+  { label: 'Projects', value: '13+' },
+  { label: 'Stack', value: 'Full-Stack MERN' },
+  { label: 'Availability', value: 'Open to Remote' },
+];
+
+export const skillCategories: SkillCategory[] = [
+  {
+    name: 'Frontend',
+    skills: [
+      { name: 'React.js', Icon: FaReact },
+      { name: 'Next.js', Icon: SiNextdotjs },
+      { name: 'Redux Toolkit', Icon: SiRedux },
+      { name: 'TypeScript', Icon: SiTypescript },
+      { name: 'JavaScript (ES6+)', Icon: SiJavascript },
+      { name: 'HTML5', Icon: FaHtml5 },
+      { name: 'CSS3', Icon: FaCss3Alt },
+      { name: 'SCSS', Icon: SiSass },
+      { name: 'Material UI', Icon: SiMui },
+      { name: 'TailwindCSS', Icon: SiTailwindcss },
+      { name: 'Highcharts', Icon: FaChartArea },
+    ],
+  },
+  {
+    name: 'Backend',
+    skills: [
+      { name: 'Node.js', Icon: FaNodeJs },
+      { name: 'Express.js', Icon: SiExpress },
+      { name: 'RESTful APIs', Icon: TbApi },
+      { name: 'Swagger', Icon: SiSwagger },
+      { name: 'JWT Auth', Icon: BsShieldLock },
+      { name: 'OAuth', Icon: BsShieldLock },
+      { name: 'Biometric Auth', Icon: BsFingerprint },
+      { name: 'Payment Gateways', Icon: MdPayment },
+      { name: 'In-App Purchases', Icon: MdPayment },
+    ],
+  },
+  {
+    name: 'Databases',
+    skills: [
+      { name: 'MongoDB', Icon: SiMongodb },
+      { name: 'Mongoose', Icon: SiMongodb },
+      { name: 'PostgreSQL', Icon: SiPostgresql },
+      { name: 'PostGIS', Icon: SiPostgresql },
+      { name: 'MySQL', Icon: SiMysql },
+    ],
+  },
+  {
+    name: 'Cloud & DevOps',
+    skills: [
+      { name: 'AWS S3', Icon: FaAws },
+      { name: 'AWS EC2', Icon: FaAws },
+      { name: 'Docker', Icon: FaDocker },
+      { name: 'Git', Icon: FaGitAlt },
+      { name: 'GitHub', Icon: FaGithub },
+      { name: 'GitLab', Icon: FaGitlab },
+      { name: 'Bitbucket', Icon: FaBitbucket },
+      { name: 'Webpack', Icon: SiWebpack },
+    ],
+  },
+  {
+    name: 'AI Tools',
+    skills: [
+      { name: 'Claude Code', Icon: RiRobot2Line },
+      { name: 'OpenAI Codex', Icon: SiOpenai },
+      { name: 'AI-Assisted Workflows', Icon: RiRobot2Line },
+    ],
+  },
+  {
+    name: 'Testing',
+    skills: [
+      { name: 'Jest', Icon: SiJest },
+      { name: 'Supertest', Icon: TbApi },
+      { name: 'React Testing Library', Icon: FaReact },
+    ],
+  },
+  {
+    name: 'Tools',
+    skills: [
+      { name: 'VS Code', Icon: TbBrandVscode },
+      { name: 'Postman', Icon: SiPostman },
+      { name: 'JIRA', Icon: FaJira },
+      { name: 'Azure DevOps', Icon: TbBrandAzure },
+      { name: 'Vite', Icon: SiVite },
+    ],
+  },
+  {
+    name: 'Methodologies',
+    skills: [
+      { name: 'Agile / Scrum', Icon: BsKanban },
+      { name: 'Performance Optimization', Icon: FaChartArea },
+      { name: 'Clean Code', Icon: TbApi },
+      { name: 'Code Review', Icon: FaGithub },
+    ],
+  },
+];
+
+export const experience: ExperienceItem[] = [
+  {
+    company: 'SpiderWeb Technologies / Knovatek Inc.',
+    position: 'MERN Stack Developer',
+    duration: 'Jun 2025 - Present',
+    location: 'Canada (Remote)',
+    responsibilities: [
+      'Develop and maintain scalable web applications using React.js, Next.js, Node.js, Express.js, MongoDB, and TypeScript.',
+      'Use AI-assisted development workflows with Claude Code for feature development, debugging, refactoring, and documentation.',
+      'Deploy and manage applications using AWS EC2, Docker containers, and AWS S3.',
+      'Build reusable frontend architectures with React.js, Redux Toolkit, and MUI.',
+      'Optimize backend and database performance using PostgreSQL, PostGIS, and MongoDB.',
+      'Integrate secure payment gateways, third-party APIs, and JWT/OAuth authentication.',
+      'Debug, test, and optimize using Jest, Supertest, and Chrome DevTools.',
+    ],
+    tech: ['React', 'Next.js', 'Node.js', 'Express.js', 'MongoDB', 'PostgreSQL', 'PostGIS', 'TypeScript', 'Redux Toolkit', 'MUI', 'AWS EC2', 'AWS S3', 'Docker', 'Jest', 'Supertest'],
+  },
+  {
+    company: 'Cisconic Pvt. Ltd.',
+    position: 'MERN Stack Developer',
+    duration: 'Mar 2022 - Jun 2025',
+    location: 'Hyderabad, India (Remote)',
+    responsibilities: [
+      'Delivered full-stack projects including RevolutioM, Patient Portal, Real Estate Platform, and E-Commerce System.',
+      'Led end-to-end development of complex web platforms, architecting scalable frontend and backend solutions.',
+      'Built secure RESTful APIs with Swagger documentation and implemented JWT, OAuth, and biometric authentication.',
+      'Improved application performance through SQL query optimization, backend refactoring, and caching.',
+      'Integrated in-app purchases, payment gateway modules, and third-party services.',
+      'Participated in Agile ceremonies; mentored junior developers and conducted code reviews.',
+    ],
+    tech: ['React', 'TypeScript', 'Redux', 'Node.js', 'Express.js', 'MongoDB', 'MySQL', 'MUI', 'Highcharts', 'Swagger', 'JWT', 'OAuth', 'Jest', 'Git', 'JIRA', 'Bitbucket', 'Agile'],
+  },
+  {
+    company: 'Neeta Tech Tyre Pvt. Ltd.',
+    position: 'Full Stack Web Developer (Intern)',
+    duration: 'Jan 2020 - Jul 2020',
+    location: 'Pune, India (On-site)',
+    responsibilities: [
+      'Developed the Doctor On Door Lifeline healthcare platform as part of the core development team.',
+      'Built key frontend modules and integrated REST APIs with the user interface.',
+      'Assisted in early-stage application development, testing, and debugging across the full stack.',
+    ],
+    tech: ['JavaScript', 'HTML5', 'CSS3', 'REST APIs', 'Git'],
+  },
+];
+
+export const projectGroups: ProjectGroup[] = [
+  {
+    category: 'full-stack',
+    label: 'Full-Stack (MERN)',
+    projects: [
+      {
+        name: 'RevolutioM 2.0',
+        description:
+          'Enterprise revenue & trade-promotion planning BI platform (micro-frontend React) for client vendors and distributors. Built interactive Highcharts dashboards, multi-dimensional filtering, drill-downs, trend forecasting, and automated reports for sales, profit, and market-share analysis at country/state/city/territory level.',
+        tech: ['React', 'TypeScript', 'Redux', 'MUI', 'Highcharts', 'Micro-frontends', 'REST APIs', 'Jest'],
+        github: null,
+        live: null,
+        image: Project_1,
+      },
+      {
+        name: 'IVF Patient Management Portal',
+        description:
+          'Healthcare application for tracking IVF treatments with a color-coded treatment timeline, appointment scheduling, real-time medication and drug monitoring, and billing management for patients and providers.',
+        tech: ['React', 'Node.js', 'Express.js', 'MySQL', 'JWT', 'MUI', 'Redux', 'REST APIs'],
+        github: null,
+        live: null,
+        image: Patient_Portal,
+      },
+      {
+        name: 'Vegetables E-Commerce Platform',
+        description:
+          'Full-stack fresh-produce store with a dynamic catalog, attribute filters (organic/seasonal/freshness), cart and checkout, secure payment-gateway integration, and order and inventory management.',
+        tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Payment Gateway', 'JWT', 'REST APIs'],
+        github: null,
+        live: null,
+        image: E_Com,
+      },
+      {
+        name: 'Real Estate Management Platform',
+        description:
+          'Centralized management of customers, properties, sites, towers, and flats with inquiry, booking, and transaction handling plus real-time data synchronization.',
+        tech: ['React', 'Node.js', 'Express.js', 'MySQL', 'Redux', 'MUI', 'REST APIs', 'JWT'],
+        github: null,
+        live: null,
+      },
+      {
+        name: 'Show Phase',
+        description:
+          'Event production & workforce management platform connecting organizers with crew. Worked across the stack on scheduling, crew assignment, and production tracking, plus backend services and APIs.',
+        tech: ['React', 'Node.js', 'Express.js', 'MongoDB', 'AWS', 'REST APIs'],
+        github: null,
+        live: null,
+        draft: true,
+      },
+      {
+        name: 'Doctor On Door Lifeline',
+        description:
+          'Healthcare platform built during internship; developed key frontend modules and integrated REST APIs for seamless data flow.',
+        tech: ['JavaScript', 'HTML5', 'CSS3', 'REST APIs'],
+        github: null,
+        live: null,
+      },
+    ],
+  },
+  {
+    category: 'frontend',
+    label: 'Frontend (React)',
+    projects: [
+      {
+        name: 'CarChaser',
+        description:
+          'Multi-portal online car auction & marketplace platform with distinct buyer, seller, and admin experiences: live auction listings, bidding flows, vehicle detail pages, and dashboards.',
+        tech: ['React', 'Redux', 'TypeScript', 'REST APIs'],
+        github: null,
+        live: null,
+        draft: true,
+      },
+    ],
+  },
+  {
+    category: 'backend',
+    label: 'Backend (Node / Express)',
+    projects: [
+      {
+        name: 'CareChronicle',
+        description:
+          'Patient-controlled medical-records platform with a HIPAA-conscious architecture and AI-enabled features. Led backend development: secure RESTful APIs, role-based access so patients own and grant access to their records, and AI-assisted clinical-data structuring.',
+        tech: ['Node.js', 'Express.js', 'MongoDB', 'AWS', 'JWT', 'AI Integrations'],
+        github: null,
+        live: null,
+        draft: true,
+      },
+      {
+        name: 'Florus',
+        description:
+          'Scalable school grocery & subscription platform enabling recurring institutional orders. Engineered backend subscription/billing logic, order management, and inventory APIs.',
+        tech: ['Node.js', 'Express.js', 'PostgreSQL', 'REST APIs'],
+        github: null,
+        live: null,
+        draft: true,
+      },
+    ],
+  },
+  {
+    category: 'other',
+    label: 'Academic & Early Work',
+    projects: [
+      {
+        name: 'Online Quiz Portal',
+        description: 'Web quiz application for creating, taking, and scoring timed assessments with result tracking.',
+        tech: ['JavaScript', 'HTML5', 'CSS3'],
+        github: null,
+        live: null,
+        draft: true,
+      },
+      {
+        name: 'Avatar the Art Bender',
+        description: 'College creative-coding project exploring interactive visuals and animation.',
+        tech: ['JavaScript', 'HTML5', 'CSS3'],
+        github: null,
+        live: null,
+        draft: true,
+      },
+      {
+        name: 'Chemical Lab Inventory',
+        description: 'Lab inventory system tracking chemicals, stock levels, and usage records for a college chemistry department.',
+        tech: ['PHP', 'MySQL'],
+        github: null,
+        live: null,
+        draft: true,
+      },
+      {
+        name: 'Food Ordering System',
+        description: 'Food-ordering application (Geo Petr College, Karjat) for menu management, order placement, and billing.',
+        tech: ['Java', 'MySQL'],
+        github: null,
+        live: null,
+        draft: true,
+      },
+    ],
+  },
+];
+
+export const education: EducationItem[] = [
+  {
+    degree: 'Master of Computer Science (MCS)',
+    institution: 'MES Garware College of Commerce (Autonomous)',
+    university: 'Savitribai Phule Pune University',
+    years: '2018 - 2020',
+  },
+  {
+    degree: 'Bachelor of Computer Science (BCS)',
+    institution: "Rayat Shikshan Sanstha's Dada Patil Mahavidyalaya",
+    university: 'Savitribai Phule Pune University',
+    years: '2014 - 2018',
+  },
+];
+
+export const languages = ['English', 'Hindi', 'Marathi'];
+
+export const contactInfo: ContactItem[] = [
+  { icon: Mail, title: 'Email', content: 'parharajay001@gmail.com', href: 'mailto:parharajay001@gmail.com' },
+  { icon: Phone, title: 'Phone', content: '+91-7721908843', href: 'tel:+917721908843' },
+  { icon: Github, title: 'GitHub', content: 'github.com/parharajay001', href: 'https://github.com/parharajay001' },
+  { icon: Linkedin, title: 'LinkedIn', content: 'linkedin.com/in/ajay-parhar', href: 'https://www.linkedin.com/in/ajay-parhar' },
+  { icon: Globe, title: 'Portfolio', content: 'parharajay001.github.io/portfolio', href: 'https://parharajay001.github.io/portfolio' },
+  { icon: FileText, title: 'Resume', content: 'Download PDF', href: Resume },
+];
