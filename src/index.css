@@ -42,14 +42,6 @@ body {
   transition-duration: 200ms;
 }
 
-.section-title {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 700;
-  color: rgb(var(--foreground-secondary));
-  margin-bottom: 2rem;
-}
-
 .nav-link {
   cursor: pointer;
   transition-property: color;

@@ -40,7 +40,7 @@ export const Hero = ({ scrollToSection }: HeroProps) => {
         <div className="mt-8 flex flex-col sm:flex-row gap-3">
           <button
             onClick={() => scrollToSection('projects')}
-            className="px-5 py-2.5 rounded bg-primary text-background font-semibold hover:bg-primary-hover transition-colors prompt-btn"
+            className="px-5 py-2.5 rounded bg-primary text-background font-semibold hover:bg-primary-hover transition-colors"
           >
             view --projects
           </button>

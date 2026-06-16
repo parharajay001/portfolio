@@ -9,12 +9,12 @@ import {
 import {
   SiRedux, SiTypescript, SiJavascript, SiMui, SiTailwindcss, SiJest,
   SiPostman, SiVite, SiMongodb, SiExpress, SiMysql, SiPostgresql,
-  SiSwagger, SiNextdotjs, SiSass, SiOpenai, SiWebpack,
+  SiSwagger, SiNextdotjs, SiSass, SiOpenai, SiWebpack, SiMocha, SiGooglechrome,
 } from 'react-icons/si';
 import { TbBrandVscode, TbApi, TbBrandAzure } from 'react-icons/tb';
 import { BsKanban, BsFingerprint, BsShieldLock } from 'react-icons/bs';
 import { RiRobot2Line } from 'react-icons/ri';
-import { MdPayment } from 'react-icons/md';
+import { MdPayment, MdDevices } from 'react-icons/md';
 import type { IconType } from 'react-icons';
 
 export interface Skill {
@@ -103,6 +103,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Material UI', Icon: SiMui },
       { name: 'TailwindCSS', Icon: SiTailwindcss },
       { name: 'Highcharts', Icon: FaChartArea },
+      { name: 'Responsive Design', Icon: MdDevices },
     ],
   },
   {
@@ -156,6 +157,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Jest', Icon: SiJest },
       { name: 'Supertest', Icon: TbApi },
       { name: 'React Testing Library', Icon: FaReact },
+      { name: 'Mocha', Icon: SiMocha },
     ],
   },
   {
@@ -165,6 +167,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Postman', Icon: SiPostman },
       { name: 'JIRA', Icon: FaJira },
       { name: 'Azure DevOps', Icon: TbBrandAzure },
+      { name: 'Chrome DevTools', Icon: SiGooglechrome },
       { name: 'Vite', Icon: SiVite },
     ],
   },
