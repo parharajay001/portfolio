@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { languages } from '../../../data/portfolioData';
 
 export const Languages = () => {
