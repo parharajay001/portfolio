@@ -1,90 +1,107 @@
 # Ajay Ramdas Parhar
 
-**Full Stack Software Engineer | MERN Stack Specialist**  
+**Senior MERN Stack Developer | React · Next.js · Node.js · TypeScript**  
 📍 Pune, India | 📞 +91-7721908843 | 📧 [parharajay001@gmail.com](mailto:parharajay001@gmail.com)
 
 ---
 
 ## 🚀 Summary
 
-Experienced **Full Stack Software Engineer** with 3+ years of hands-on expertise in the **MERN stack**, specializing in building scalable, performant, and user-centric applications. Proven track record of delivering complex web platforms in domains like healthcare, e-commerce, and real estate. Strong advocate of clean architecture, test-driven development, and agile practices. Known for cross-functional collaboration, mentoring, and consistently improving system efficiency and user experience.
+Experienced and results-driven **Senior MERN Stack Developer** with **4+ years** of hands-on expertise building scalable, high-performance web applications with **MongoDB, Express.js, React.js, Node.js, and Next.js**. Proven track record delivering complex platforms across healthcare, e-commerce, real estate, and event-production domains. Strong in TypeScript, clean architecture, secure authentication (JWT, OAuth, biometric), payment-gateway and in-app-purchase integration, and AWS (S3, EC2, Docker). Known for cross-functional collaboration, mentoring, and AI-assisted development workflows with Claude Code and OpenAI Codex.
 
 ---
 
 ## 💼 Experience
 
-### Software Engineer  
-**Cisconic Pvt. Ltd., Pune**  
-_March 2022 – Present_
+### MERN Stack Developer  
+**SpiderWeb Technologies / Knovatek Inc.** — Canada (Remote)  
+_June 2025 – Present_
 
-**Key Projects**: *RevolutioM*, *Patient Portal*, *Real Estate Platform*, *E-Commerce Solution*
-
-- Designed and maintained scalable RESTful APIs with JWT authentication, enhancing backend security and performance.
-- Developed complex frontend modules using React, Redux, and TailwindCSS, improving UI responsiveness and accessibility.
-- Led database optimization (query tuning, indexing), reducing API response times by up to 40%.
-- Established automated testing pipelines using Jest and Mocha, reducing production issues by 35%.
-- Collaborated with UI/UX teams to refine product interfaces, boosting user satisfaction by 25%.
-- Mentored junior developers and led peer code reviews to ensure quality and consistency.
-- Authored internal API and architectural documentation for maintainability and onboarding.
+- Develop and maintain scalable web applications using React.js, Next.js, Node.js, Express.js, MongoDB, and TypeScript.
+- Use AI-assisted development workflows with Claude Code for feature development, debugging, refactoring, and documentation.
+- Deploy and manage applications using AWS EC2, Docker containers, and AWS S3.
+- Optimize backend and database performance with PostgreSQL, PostGIS, and MongoDB.
+- Integrate secure payment gateways, third-party APIs, and JWT/OAuth authentication.
 
 ---
 
-### Software Engineer Intern  
-**Neeta-Tech Pvt. Ltd., Pune**  
+### MERN Stack Developer  
+**Cisconic Pvt. Ltd.** — Hyderabad (Remote)  
+_March 2022 – June 2025_
+
+**Key Projects**: *RevolutioM*, *Patient Portal*, *Real Estate Platform*, *E-Commerce System*
+
+- Led end-to-end development of complex web platforms, architecting scalable frontend and backend solutions.
+- Built secure RESTful APIs with Swagger documentation and implemented JWT, OAuth, and biometric authentication.
+- Improved application performance through SQL query optimization, backend refactoring, and caching.
+- Integrated in-app purchases, payment gateway modules, and third-party services.
+- Mentored junior developers and conducted code reviews to maintain high code quality.
+
+---
+
+### Full Stack Web Developer (Intern)  
+**Neeta Tech Tyre Pvt. Ltd.** — Pune (On-site)  
 _January 2020 – July 2020_
 
 **Project**: *Doctor On Door Lifeline*
 
-- Built responsive frontends for patient registration and appointment booking using HTML, CSS, and JavaScript.
-- Integrated RESTful APIs for real-time doctor-patient interactions.
+- Built key frontend modules and integrated REST APIs with the user interface.
+- Assisted in early-stage application development, testing, and debugging across the full stack.
 - Participated in Agile sprints and contributed to delivery of core application modules.
 
 ---
 
 ## 🛠 Key Projects
 
-### RevolutioM – Enterprise Management Tool
-> Developed role-based dashboards, integrated scalable multi-tenant architecture, and collaborated on UI optimization.
+### CareChronicle – Patient-Controlled Medical Records (Backend)
+> HIPAA-intent platform with a layered Node.js/TypeScript/Express 5 API on PostgreSQL + PostGIS, 6 auth flows (JWT, OAuth, MFA, biometric), AES-256-GCM field encryption, and a provider-agnostic AI layer with automatic failover.
 
-### E-Commerce Platform
-> Implemented product and order management APIs, integrated Stripe payments, and built analytics-driven admin dashboard.
+### ShowPhaze – Event Production & Workforce Platform
+> B2B platform connecting production companies with on-demand crew. Versioned REST API (v1–v6), real-time messaging over Socket.IO, and a full-scale React SaaS with role-based portals.
 
-### Patient Portal – Healthcare App
-> Designed secure login systems, enabled real-time scheduling, and collaborated with medical professionals for workflow automation.
+### CarChaser – Online Vehicle Auction & Marketplace
+> Yarn-workspaces monorepo serving five role-based React portals with live auctions and bidding (Pusher), PayPal/Flutterwave payments, and multilingual support.
+
+### RevolutioM 2.0 – Enterprise Planning Platform
+> Micro-frontend monorepo (Lerna + Yarn, 13+ packages) in React 18 with scenario/innovation planning, Okta SSO, rich data visualizations, and an Azure DevOps CI/CD pipeline.
+
+### Patient Portal – Healthcare
+> Patient-facing portal for a hospital/IVF clinic on MS SQL Server, with a passwordless onboarding flow and modules for appointments, prescriptions, lab tests, billing, and documents.
 
 ---
 
 ## 📚 Education
 
 - **Master of Computer Science (MCS)**  
-  Savitribai Phule Pune University — 2020
+  MES Garware College of Commerce (Autonomous), Savitribai Phule Pune University — 2018–2020
 
 - **Bachelor of Computer Science (BCS)**  
-  Savitribai Phule Pune University — 2018
+  Rayat Shikshan Sanstha's Dada Patil Mahavidyalaya, Savitribai Phule Pune University — 2014–2018
 
 ---
 
 ## 🧰 Technical Skills
 
-**Frontend**: React, Redux, TailwindCSS, MUI, HTML5, CSS3  
-**Backend**: Node.js, Express.js, REST APIs, JWT  
-**Database**: MySQL, SQL, Schema Design, Indexing  
-**Testing**: Jest, Mocha, Chai  
-**Tools**: Git, GitHub, GitLab, Azure, Bitbucket, Postman, VS Code, Chrome DevTools  
-**Practices**: Agile, Scrum, TDD, CI/CD, Code Reviews, Documentation  
-**Architecture**: Monolithic to Modular Refactoring, Multi-Tenant Systems
+**Frontend**: React.js, Next.js, Redux / Redux Toolkit, TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS, MUI, TailwindCSS, Highcharts  
+**Backend**: Node.js, Express.js, RESTful APIs, Swagger, JWT, OAuth, Biometric Auth, Payment Gateway & In-App Purchase Integration  
+**Databases**: MongoDB, Mongoose, PostgreSQL, PostGIS, MySQL  
+**Cloud & DevOps**: AWS S3, AWS EC2, Docker, Git, GitHub, GitLab, Bitbucket, Webpack  
+**AI Tools**: Claude Code, OpenAI Codex, AI-assisted development workflows  
+**Testing**: Jest, Supertest, React Testing Library, Mocha  
+**Tools**: VS Code, Postman, JIRA, Azure DevOps, Chrome DevTools, Vite  
+**Practices**: Agile / Scrum, Performance Optimization, Clean Code, Code Reviews
 
 ---
 
 ## 🎯 Core Strengths
 
 - Full Stack Web Development  
+- Scalable API & Micro-Frontend Architecture  
 - Performance Optimization  
 - Database Design & Tuning  
-- Scalable API Architecture  
+- Secure Authentication & Payments  
 - Team Collaboration & Mentorship  
-- Test-Driven Development  
-- UX Collaboration  
+- AI-Assisted Development  
 - Technical Documentation
 
 ---
@@ -101,10 +118,12 @@ _January 2020 – July 2020_
 
 **Date of Birth:** April 17, 1996  
 **Current Location:** Pune, India  
-**Work Preference:** Pune-based or Remote roles  
+**Work Preference:** Remote or Pune-based roles  
 
 ---
 
-## 📬 Let’s Connect
+## 📬 Let's Connect
 
-I’m actively exploring exciting opportunities in **software development**. Let’s build something impactful together!
+I'm actively exploring exciting opportunities in **software development**. Let's build something impactful together!
+
+[Portfolio](https://parharajay001.github.io/portfolio) · [LinkedIn](https://www.linkedin.com/in/ajay-parhar) · [GitHub](https://github.com/parharajay001) · [parharajay001@gmail.com](mailto:parharajay001@gmail.com)
