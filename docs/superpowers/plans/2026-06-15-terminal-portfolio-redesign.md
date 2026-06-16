@@ -246,7 +246,7 @@ export interface ContactItem {
 
 export const personalInfo = {
   name: 'Ajay Ramdas Parhar',
-  role: 'Senior MERN Stack Developer',
+  role: 'MERN Stack Developer',
   title: 'MERN Stack Developer | React | Next.js | Node.js | TypeScript | AWS | Docker',
   location: 'Pune, Maharashtra, India',
   email: 'parharajay001@gmail.com',
@@ -255,7 +255,7 @@ export const personalInfo = {
   github: 'https://github.com/parharajay001',
   portfolio: 'https://parharajay001.github.io/portfolio',
   resume: Resume,
-  bio: `Experienced and results-driven Senior MERN Stack Developer with 4+ years building scalable, high-performance web applications using MongoDB, Express.js, React.js, Node.js, and Next.js. Strong in TypeScript, clean architecture, payment-gateway and in-app-purchase integration, AWS (S3, EC2, Docker), and secure authentication (JWT, OAuth, biometric). Adept at AI-assisted development workflows with Claude Code and OpenAI Codex.`,
+  bio: `Experienced and results-driven MERN Stack Developer with 4+ years building scalable, high-performance web applications using MongoDB, Express.js, React.js, Node.js, and Next.js. Strong in TypeScript, clean architecture, payment-gateway and in-app-purchase integration, AWS (S3, EC2, Docker), and secure authentication (JWT, OAuth, biometric). Adept at AI-assisted development workflows with Claude Code and OpenAI Codex.`,
   image: ProfilePic,
 };
 

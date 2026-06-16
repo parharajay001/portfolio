@@ -60,8 +60,8 @@ Toggle reuses the existing `ThemeContext` (`light`/`dark`, persisted to `localSt
 ## Page Structure (top → bottom)
 
 1. **Navbar** — `~/ajay-parhar` prompt logo; section links styled as commands (`./about`, `./skills`, `./experience`, `./projects`, `./contact`); theme toggle; resume download. Mobile: collapsible menu (reuse existing pattern).
-2. **Hero** — `whoami` block: role ("Senior MERN Stack Developer"), animated cursor, tagline; **stats strip** (4+ yrs · 13+ projects · full-stack · open to remote); buttons `view --projects` / `contact --me`; resume download; profile photo optional in a terminal window frame.
-3. **About** — `cat about.md` framing; updated bio (4+ years, senior); photo in terminal-window chrome.
+2. **Hero** — `whoami` block: role ("MERN Stack Developer"), animated cursor, tagline; **stats strip** (4+ yrs · 13+ projects · full-stack · open to remote); buttons `view --projects` / `contact --me`; resume download; profile photo optional in a terminal window frame.
+3. **About** — `cat about.md` framing; updated bio (4+ years); photo in terminal-window chrome.
 4. **Skills** — categorized blocks (see Content). Each skill = icon + mono label.
 5. **Experience** — vertical timeline of 3 roles as expandable terminal log entries.
 6. **Projects** — **file-tree explorer** grouped by tech; click a file to expand inline (description + tech tags + links).
@@ -110,11 +110,11 @@ contactInfo: { icon, title, content, href }[]
 
 ### personalInfo
 - name: **Ajay Ramdas Parhar**
-- role: **Senior MERN Stack Developer**
+- role: **MERN Stack Developer**
 - location: **Pune, Maharashtra, India**
 - email: parharajay001@gmail.com · phone: +91-7721908843
 - linkedin: linkedin.com/in/ajay-parhar · github: github.com/parharajay001 · portfolio: parharajay001.github.io/portfolio
-- bio: "Experienced and results-driven Senior MERN Stack Developer with **4+ years** building scalable, high-performance web applications with MongoDB, Express.js, React.js, Node.js, and Next.js. Strong in TypeScript, clean architecture, payment-gateway and in-app-purchase integration, AWS (S3, EC2, Docker), and secure auth (JWT, OAuth, biometric). AI-assisted development workflows with Claude Code and OpenAI Codex."
+- bio: "Experienced and results-driven MERN Stack Developer with **4+ years** building scalable, high-performance web applications with MongoDB, Express.js, React.js, Node.js, and Next.js. Strong in TypeScript, clean architecture, payment-gateway and in-app-purchase integration, AWS (S3, EC2, Docker), and secure auth (JWT, OAuth, biometric). AI-assisted development workflows with Claude Code and OpenAI Codex."
 
 ### stats
 4+ Years Experience · 13+ Projects · Full-Stack (MERN) · Open to Remote
