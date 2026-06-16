@@ -236,8 +236,8 @@ export const projectGroups: ProjectGroup[] = [
       {
         name: 'RevolutioM 2.0',
         description:
-          'Enterprise revenue & trade-promotion planning platform architected as a micro-frontend monorepo (Lerna + Yarn workspaces) with 13+ independently deployable packages in React 18 and TypeScript. Built core feature modules including scenario planning, innovation planning, and approval workflows, with interactive Highcharts dashboards, multi-dimensional filtering, and drill-downs for sales, profit, and market-share analysis at country/state/city/territory level.',
-        tech: ['React 18', 'TypeScript', 'Redux', 'Micro-frontends', 'Lerna', 'Yarn Workspaces', 'Highcharts', 'MUI', 'REST APIs'],
+          'Large-scale enterprise revenue & trade-promotion planning platform built as a micro-frontend monorepo (Lerna + Yarn workspaces, 13+ independently deployable packages) in React 18 and TypeScript. Built core feature modules including scenario planning, innovation planning, approval workflows, interactive dashboards, and a drag-and-drop auto-calendarization engine (FullCalendar). Engineered shared component and service libraries to enforce reuse across teams, with centralized Redux state, Okta SSO authentication, and i18n. Delivered rich data visualizations via Highcharts, jVectorMap, and TanStack/MUI data grids. Established a CI/CD pipeline on Azure DevOps with semantic-release versioning, conventional-commit linting (Husky), multi-environment builds, and Dockerized IIS deployment.',
+        tech: ['React 18', 'TypeScript', 'Micro-frontends', 'Lerna', 'Yarn Workspaces', 'Redux', 'Okta SSO', 'Highcharts', 'jVectorMap', 'TanStack Table', 'FullCalendar', 'Azure DevOps', 'Docker'],
         github: null,
         live: null,
         image: Project_1,
@@ -245,8 +245,8 @@ export const projectGroups: ProjectGroup[] = [
       {
         name: 'Patient Portal — Healthcare',
         description:
-          'Patient-facing portal for a hospital / IVF clinic management system. Built a secure RESTful backend (Node.js, Express, TypeScript) on MS SQL Server with JWT authentication and MRN-driven account onboarding, plus a responsive single-page React front-end featuring a passwordless onboarding flow (account setup → OTP verification → login) and modules for Appointments, Prescriptions, Lab Tests, Billing, and Documents.',
-        tech: ['React', 'Node.js', 'Express.js', 'TypeScript', 'MS SQL Server', 'JWT', 'REST APIs'],
+          'Patient-facing portal for a hospital / IVF clinic management system. On the backend, built a secure RESTful API (Node.js, Express, TypeScript) on MS SQL Server with JWT authentication and MRN-driven account onboarding, paginated APIs for appointments, billing, lab reports, prescriptions, and dosage schedules, on-demand PDF generation for bills and prescriptions (Puppeteer + Handlebars), and Twilio (OTP/SMS) and AWS S3 integration. On the front-end, built a responsive React 18 + TypeScript single-page app with a passwordless onboarding flow (account setup → OTP → login), modules for Appointments, Prescriptions, Lab Tests, Billing, and Documents, and a personalized health dashboard with interactive Highcharts visualizations — using Redux Toolkit & Thunk, React Router v6, and MUI v5 (DataGrid, date pickers), with Jest/RTL coverage.',
+        tech: ['React 18', 'TypeScript', 'Node.js', 'Express.js', 'MS SQL Server', 'JWT', 'Redux Toolkit', 'MUI v5', 'Puppeteer', 'Twilio', 'AWS S3', 'Highcharts', 'Jest'],
         github: null,
         live: null,
         image: Patient_Portal,
@@ -271,8 +271,8 @@ export const projectGroups: ProjectGroup[] = [
       {
         name: 'ShowPhaze',
         description:
-          'B2B event-production & workforce-management platform connecting event production companies with on-demand contractors and freelance crew. Worked across the stack: architected a versioned Node.js / Express REST API (v1–v6) serving both web and mobile clients across 40+ domains, and built a full-scale React SaaS front-end digitizing the entire event-production lifecycle with role-based portals (Admin, Client, Coordinator, Freelancer, Contractor) on a single codebase with protected routing.',
-        tech: ['React', 'Node.js', 'Express.js', 'TypeScript', 'REST API (v1–v6)', 'Role-Based Portals', 'Web & Mobile'],
+          'B2B event-production & workforce-management platform connecting production companies with on-demand contractors and freelance crew. On the backend, architected a versioned Node.js/Express REST API (v1–v6) serving web and mobile clients across 40+ domains (opportunities/job postings, positions, event estimates, invoicing, reimbursements, statements of work, purchase orders, DocuSign contractor agreements), with real-time one-to-one and group messaging over Socket.IO scaled across processes via a Redis pub/sub adapter and distributed locks, multi-channel notifications (Firebase push, AWS SNS/Pinpoint SMS, Nodemailer), cron jobs, JWT auth with 2FA, MongoDB/Mongoose, AWS S3, Excel/PDF reporting, and New Relic observability. On the front-end, built a full-scale React 18 SaaS app with role-based portals (Admin, Client, Coordinator, Freelancer, Contractor), end-to-end workflows with e-signatures, interactive analytics (ECharts/Recharts), FullCalendar scheduling, Google Maps, and dynamic PDF/Excel export.',
+        tech: ['React 18', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'Socket.IO', 'Redis', 'Redux Toolkit', 'MUI', 'AWS S3', 'Firebase', 'JWT (2FA)', 'Docker', 'New Relic'],
         github: null,
         live: null,
       },
@@ -293,8 +293,8 @@ export const projectGroups: ProjectGroup[] = [
       {
         name: 'CarChaser',
         description:
-          'Full-featured online vehicle auction and marketplace platform built as a Yarn-workspaces monorepo serving five role-based React portals — Admin, Agent, Dealer, Seller, and Export Buyer — that share a common component/logic package to maximize code reuse across the platform.',
-        tech: ['React', 'Yarn Workspaces', 'Monorepo', 'Redux', 'TypeScript', 'REST APIs'],
+          'Full-featured online vehicle auction and marketplace platform built as a Yarn-workspaces monorepo serving five role-based React portals — Admin, Agent, Dealer, Seller, and Export Buyer — that share a common component/logic package to maximize code reuse. Supports real-time live auctions and bidding (Pusher), Buy Now and negotiation flows, watchlists, garages, order management, and a vehicle valuation/estimate tool. Integrated PayPal and Flutterwave payments for global transactions with wallet management and PDF invoice/report generation. Built with React 18, Redux Toolkit + redux-persist, Material UI 7, Formik/Yup validation, React Router 6, Google Maps, and full multilingual support via i18next; architected with CRACO and module aliasing for scalable cross-app development.',
+        tech: ['React 18', 'Yarn Workspaces', 'Monorepo', 'Redux Toolkit', 'MUI 7', 'Pusher', 'PayPal', 'Flutterwave', 'i18next', 'React Router 6', 'CRACO'],
         github: null,
         live: null,
       },
@@ -315,8 +315,8 @@ export const projectGroups: ProjectGroup[] = [
       {
         name: 'Florius',
         description:
-          'Backend for Florius, a mobile platform connecting students, schools, and marketing agents for school discovery and admissions. Engineered a RESTful API with Node.js, Express, and MongoDB (Mongoose) featuring role-based authentication (JWT), OTP verification, and subscription management.',
-        tech: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'OTP', 'REST APIs'],
+          'Backend for Florius, a mobile platform connecting students, schools, and marketing agents for school discovery and admissions. Engineered a RESTful API with Node.js, Express, and MongoDB (Mongoose) featuring role-based authentication (JWT), OTP verification, and multi-role profile management. Implemented in-app purchase verification and subscription management for both the Apple App Store and Google Play (including server-to-server webhooks), Firebase Cloud Messaging push, Twilio SMS, Nodemailer email, and AWS S3 media uploads. Added advanced school search/filtering, analytics, an agent-referral system, automated database backup/restore scripts, and node-cron jobs — with 80%+ test coverage via Jest and Supertest using in-memory MongoDB.',
+        tech: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'OTP', 'In-App Purchases', 'Firebase Cloud Messaging', 'Twilio', 'AWS S3', 'Jest', 'Supertest'],
         github: null,
         live: null,
       },
